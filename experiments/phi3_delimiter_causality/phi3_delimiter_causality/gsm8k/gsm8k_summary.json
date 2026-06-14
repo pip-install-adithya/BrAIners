@@ -1,0 +1,11 @@
+{
+  "task": "gsm8k",
+  "n_samples": 8,
+  "clean_accuracy": 0.375,
+  "corrupt_accuracy": 0.5,
+  "clean_mean_gold_logprob": -1.9898979663848877,
+  "corrupt_mean_gold_logprob": -1.9827041774988174,
+  "mean_logprob_delta": -0.0071937888860702515,
+  "mean_clean_tokens": 106.5,
+  "mean_corrupt_tokens": 105.5
+}

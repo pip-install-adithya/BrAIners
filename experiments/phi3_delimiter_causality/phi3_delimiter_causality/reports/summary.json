@@ -1,0 +1,55 @@
+{
+  "tasks": [
+    {
+      "task": "gsm8k",
+      "n_samples": 8,
+      "clean_accuracy": 0.375,
+      "corrupt_accuracy": 0.5,
+      "clean_mean_gold_logprob": -1.9898979663848877,
+      "corrupt_mean_gold_logprob": -1.9827041774988174,
+      "mean_logprob_delta": -0.0071937888860702515,
+      "mean_clean_tokens": 106.5,
+      "mean_corrupt_tokens": 105.5
+    },
+    {
+      "task": "strategyqa",
+      "n_samples": 8,
+      "clean_accuracy": 0.625,
+      "corrupt_accuracy": 0.5,
+      "clean_mean_gold_logprob": -2.6065014600753784,
+      "corrupt_mean_gold_logprob": -1.9047232270240784,
+      "mean_logprob_delta": -0.7017782330513,
+      "mean_clean_tokens": 54.75,
+      "mean_corrupt_tokens": 53.75
+    },
+    {
+      "task": "mmlu",
+      "n_samples": 12,
+      "clean_accuracy": 0.5833333333333334,
+      "corrupt_accuracy": 0.5,
+      "clean_mean_gold_logprob": -2.1651779214541116,
+      "corrupt_mean_gold_logprob": -1.5454450448354085,
+      "mean_logprob_delta": -0.6197328766187032,
+      "mean_clean_tokens": 131.0,
+      "mean_corrupt_tokens": 130.0
+    }
+  ],
+  "n_tasks": 3,
+  "config": {
+    "BASE_MODEL": "microsoft/phi-3-mini-4k-instruct",
+    "SFT_PATH": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+    "USE_SFT_ADAPTER": true,
+    "USE_FEWSHOT": false,
+    "PATCH_WINDOW": 6,
+    "POSITION_SWEEP_LAYERS": 5,
+    "ATTN_PREFIX_WINDOW": 6,
+    "N_GSM8K": 8,
+    "N_STRATEGYQA": 8,
+    "N_MMLU_PER_SUBJECT": 4,
+    "MMLU_SUBJECTS": [
+      "abstract_algebra",
+      "college_mathematics",
+      "logical_fallacies"
+    ]
+  }
+}

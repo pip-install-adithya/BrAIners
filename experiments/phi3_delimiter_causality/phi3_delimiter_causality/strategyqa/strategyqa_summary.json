@@ -1,0 +1,11 @@
+{
+  "task": "strategyqa",
+  "n_samples": 8,
+  "clean_accuracy": 0.625,
+  "corrupt_accuracy": 0.5,
+  "clean_mean_gold_logprob": -2.6065014600753784,
+  "corrupt_mean_gold_logprob": -1.9047232270240784,
+  "mean_logprob_delta": -0.7017782330513,
+  "mean_clean_tokens": 54.75,
+  "mean_corrupt_tokens": 53.75
+}
