@@ -1,0 +1,9 @@
+{
+  "task": "gsm8k",
+  "n_samples": 5,
+  "greedy_accuracy": 0.2,
+  "mean_loss": 0.3852299690246582,
+  "std_loss": 0.1711015718891077,
+  "mean_completion_tokens": 64.4,
+  "mean_prompt_tokens": 86.6
+}

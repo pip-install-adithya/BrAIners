@@ -1,0 +1,6 @@
+task,sample_id,subject,source_index,loss,prompt_len,completion_len
+strategyqa,0,,286,10.422046661376953,13,1
+strategyqa,1,,653,9.849183082580566,19,1
+strategyqa,2,,257,9.27192497253418,25,1
+strategyqa,3,,336,8.126081466674805,27,1
+strategyqa,4,,318,8.759294509887695,29,1

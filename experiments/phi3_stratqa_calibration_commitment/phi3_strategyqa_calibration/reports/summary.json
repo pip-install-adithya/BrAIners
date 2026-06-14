@@ -1,0 +1,50 @@
+{
+  "config": {
+    "BASE_MODEL": "microsoft/phi-3-mini-4k-instruct",
+    "SFT_PATH": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+    "N_VALIDATION": 200,
+    "N_TEST": 200,
+    "PROMPT_VARIANTS": [
+      "plain",
+      "anchored"
+    ],
+    "USE_REASONING_COT": true,
+    "MAX_NEW_TOKENS": 24,
+    "N_THRESHOLD_STEPS": 201,
+    "N_RELIABILITY_BINS": 10
+  },
+  "calibration": {
+    "plain": {
+      "threshold": -1.50641473596813,
+      "accuracy": 0.59
+    },
+    "anchored": {
+      "threshold": -1.6676714040472513,
+      "accuracy": 0.595
+    }
+  },
+  "summary": [
+    {
+      "variant": "plain",
+      "raw_accuracy": 0.185,
+      "calibrated_accuracy": 0.51,
+      "explicit_answer_rate": 0.26,
+      "hedged_rate": 0.0,
+      "mean_commitment_score": 0.571,
+      "mean_log_odds": -1.364594468785956,
+      "threshold": -1.50641473596813,
+      "validation_accuracy": 0.59
+    },
+    {
+      "variant": "anchored",
+      "raw_accuracy": 0.13,
+      "calibrated_accuracy": 0.55,
+      "explicit_answer_rate": 0.215,
+      "hedged_rate": 0.0,
+      "mean_commitment_score": 0.5579999999999999,
+      "mean_log_odds": -2.0670920935886277,
+      "threshold": -1.6676714040472513,
+      "validation_accuracy": 0.595
+    }
+  ]
+}

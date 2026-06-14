@@ -1,0 +1,85 @@
+{
+  "overall": [
+    {
+      "prompt_variant": "anchored",
+      "n_questions": 40,
+      "original_accuracy": 0.375,
+      "permuted_accuracy": 0.41875,
+      "consistency_score": 0.59375,
+      "content_stability": 0.59375,
+      "raw_bias_fraction": 0.4083333333333334,
+      "raw_letter_entropy": 1.1937266624634602,
+      "canonical_letter_entropy": 0.6747610875222584
+    }
+  ],
+  "subjects": [
+    {
+      "prompt_variant": "anchored",
+      "subject": "abstract_algebra",
+      "n_questions": 8,
+      "original_accuracy": 0.25,
+      "permuted_accuracy": 0.3854166666666667,
+      "consistency_score": 0.5520833333333334,
+      "content_stability": 0.5520833333333334,
+      "raw_bias_fraction": 0.5
+    },
+    {
+      "prompt_variant": "anchored",
+      "subject": "college_mathematics",
+      "n_questions": 8,
+      "original_accuracy": 0.125,
+      "permuted_accuracy": 0.1875,
+      "consistency_score": 0.46875,
+      "content_stability": 0.46875,
+      "raw_bias_fraction": 0.4270833333333333
+    },
+    {
+      "prompt_variant": "anchored",
+      "subject": "formal_logic",
+      "n_questions": 8,
+      "original_accuracy": 0.25,
+      "permuted_accuracy": 0.3125,
+      "consistency_score": 0.6354166666666667,
+      "content_stability": 0.6354166666666667,
+      "raw_bias_fraction": 0.4166666666666667
+    },
+    {
+      "prompt_variant": "anchored",
+      "subject": "high_school_mathematics",
+      "n_questions": 8,
+      "original_accuracy": 0.25,
+      "permuted_accuracy": 0.30208333333333337,
+      "consistency_score": 0.40625,
+      "content_stability": 0.40625,
+      "raw_bias_fraction": 0.22916666666666666
+    },
+    {
+      "prompt_variant": "anchored",
+      "subject": "logical_fallacies",
+      "n_questions": 8,
+      "original_accuracy": 1.0,
+      "permuted_accuracy": 0.90625,
+      "consistency_score": 0.90625,
+      "content_stability": 0.90625,
+      "raw_bias_fraction": 0.46875
+    }
+  ],
+  "config": {
+    "BASE_MODEL": "microsoft/phi-3-mini-4k-instruct",
+    "SFT_PATH": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+    "SUBJECTS": [
+      "abstract_algebra",
+      "college_mathematics",
+      "logical_fallacies",
+      "formal_logic",
+      "high_school_mathematics"
+    ],
+    "N_QUESTIONS_PER_SUBJECT": 8,
+    "N_PERMUTATIONS": 12,
+    "USE_DELIMITER": true,
+    "DELIMITER_TEXT": "## Question:",
+    "RUN_ORIGINAL_ORDER": true,
+    "RUN_PLAIN_PROMPT_BASELINE": false,
+    "MAX_NEW_TOKENS": 16
+  }
+}

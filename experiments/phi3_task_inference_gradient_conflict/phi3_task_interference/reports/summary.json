@@ -1,0 +1,161 @@
+{
+  "config": {
+    "BASE_MODEL": "microsoft/phi-3-mini-4k-instruct",
+    "SFT_PATH": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+    "GSM8K_N": 5,
+    "STRATEGYQA_N": 5,
+    "MMLU_PER_SUBJECT": 3,
+    "MMLU_SUBJECTS": [
+      "abstract_algebra",
+      "college_mathematics",
+      "logical_fallacies"
+    ],
+    "GRAD_LAYER_COUNT": 6,
+    "REP_LAYER_STRIDE": 1,
+    "SUBSPACE_K": 8,
+    "USE_MMLU_DELIMITER": true,
+    "USE_GSM8K_REASONING_PROMPT": true,
+    "USE_STRATEGYQA_REASONING_PROMPT": false
+  },
+  "evaluation_summary": [
+    {
+      "task": "gsm8k",
+      "n": 5,
+      "greedy_accuracy": 0.2,
+      "mean_loss": 0.38522996902465817,
+      "std_loss": 0.1711015718891077,
+      "mean_prompt_tokens": 86.6,
+      "mean_completion_tokens": 64.4
+    },
+    {
+      "task": "strategyqa",
+      "n": 5,
+      "greedy_accuracy": 0.4,
+      "mean_loss": 9.28570613861084,
+      "std_loss": 0.8987219471591263,
+      "mean_prompt_tokens": 22.6,
+      "mean_completion_tokens": 16.6
+    },
+    {
+      "task": "mmlu",
+      "n": 9,
+      "greedy_accuracy": 0.5555555555555556,
+      "mean_loss": 7.123758633931478,
+      "std_loss": 4.166223243051643,
+      "mean_prompt_tokens": 88.66666666666667,
+      "mean_completion_tokens": 16.22222222222222
+    }
+  ],
+  "gradient_overall_pairs": [
+    {
+      "task_a": "gsm8k",
+      "task_b": "strategyqa",
+      "cosine": NaN,
+      "dot": 0.0,
+      "norm_a": 5.58760657440871e-05,
+      "norm_b": 0.0,
+      "conflict": false
+    },
+    {
+      "task_a": "gsm8k",
+      "task_b": "mmlu",
+      "cosine": NaN,
+      "dot": 0.0,
+      "norm_a": 5.58760657440871e-05,
+      "norm_b": 0.0,
+      "conflict": false
+    },
+    {
+      "task_a": "strategyqa",
+      "task_b": "mmlu",
+      "cosine": NaN,
+      "dot": 0.0,
+      "norm_a": 0.0,
+      "norm_b": 0.0,
+      "conflict": false
+    }
+  ],
+  "pcgrad": {
+    "naive_combined_norm": 1.8625354641699232e-05,
+    "pcgrad_combined_norm": 1.8625354641699232e-05,
+    "naive_pairwise_conflicts": 0,
+    "pcgrad_task_order": [
+      "gsm8k",
+      "strategyqa",
+      "mmlu"
+    ],
+    "pairwise_overall": [
+      {
+        "task_a": "gsm8k",
+        "task_b": "strategyqa",
+        "cosine": NaN,
+        "dot": 0.0,
+        "norm_a": 5.58760657440871e-05,
+        "norm_b": 0.0,
+        "conflict": false
+      },
+      {
+        "task_a": "gsm8k",
+        "task_b": "mmlu",
+        "cosine": NaN,
+        "dot": 0.0,
+        "norm_a": 5.58760657440871e-05,
+        "norm_b": 0.0,
+        "conflict": false
+      },
+      {
+        "task_a": "strategyqa",
+        "task_b": "mmlu",
+        "cosine": NaN,
+        "dot": 0.0,
+        "norm_a": 0.0,
+        "norm_b": 0.0,
+        "conflict": false
+      }
+    ]
+  },
+  "representation_overall_pairs": [
+    {
+      "task_a": "gsm8k",
+      "task_b": "strategyqa",
+      "mean_subspace_overlap": 0.1254074975525022,
+      "mean_centroid_cosine": 0.8495091197642044,
+      "mean_cka": 0.4703755602183515
+    },
+    {
+      "task_a": "gsm8k",
+      "task_b": "mmlu",
+      "mean_subspace_overlap": 0.17458972808316242,
+      "mean_centroid_cosine": 0.9515091725730508,
+      "mean_cka": 0.5197126100642664
+    },
+    {
+      "task_a": "strategyqa",
+      "task_b": "gsm8k",
+      "mean_subspace_overlap": NaN,
+      "mean_centroid_cosine": NaN,
+      "mean_cka": NaN
+    },
+    {
+      "task_a": "strategyqa",
+      "task_b": "mmlu",
+      "mean_subspace_overlap": 0.21559402138894573,
+      "mean_centroid_cosine": 0.9471391199300394,
+      "mean_cka": 0.7424598011109274
+    },
+    {
+      "task_a": "mmlu",
+      "task_b": "gsm8k",
+      "mean_subspace_overlap": NaN,
+      "mean_centroid_cosine": NaN,
+      "mean_cka": NaN
+    },
+    {
+      "task_a": "mmlu",
+      "task_b": "strategyqa",
+      "mean_subspace_overlap": NaN,
+      "mean_centroid_cosine": NaN,
+      "mean_cka": NaN
+    }
+  ]
+}

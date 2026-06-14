@@ -1,0 +1,78 @@
+{
+  "n_rows": 120,
+  "tasks": [
+    {
+      "n": 60,
+      "pass1_accuracy": 0.5,
+      "pass2_accuracy": 0.3,
+      "improvement_rate": 0.03333333333333333,
+      "regression_rate": 0.23333333333333334,
+      "unchanged_rate": 0.7333333333333333,
+      "prediction_change_rate": 0.6,
+      "text_change_rate": 1.0,
+      "pass1_mean_commitment": 0.6325000000000001,
+      "pass2_mean_commitment": 0.6941666666666666,
+      "pass1_mean_tokens": 204.4,
+      "pass2_mean_tokens": 256.6,
+      "pass1_mean_text_len": 431.3833333333333,
+      "pass2_mean_text_len": 563.0666666666667,
+      "task": "gsm8k"
+    },
+    {
+      "n": 60,
+      "pass1_accuracy": 0.6666666666666666,
+      "pass2_accuracy": 0.5,
+      "improvement_rate": 0.08333333333333333,
+      "regression_rate": 0.25,
+      "unchanged_rate": 0.6666666666666666,
+      "prediction_change_rate": 0.36666666666666664,
+      "text_change_rate": 1.0,
+      "pass1_mean_commitment": 0.6849999999999999,
+      "pass2_mean_commitment": 0.6708333333333333,
+      "pass1_mean_tokens": 47.96666666666667,
+      "pass2_mean_tokens": 48.95,
+      "pass1_mean_text_len": 161.15,
+      "pass2_mean_text_len": 161.33333333333334,
+      "task": "strategyqa"
+    }
+  ],
+  "global": {
+    "pass1_accuracy": 0.5833333333333334,
+    "pass2_accuracy": 0.4,
+    "improvement_rate": 0.058333333333333334,
+    "regression_rate": 0.24166666666666667,
+    "unchanged_rate": 0.7,
+    "prediction_change_rate": 0.48333333333333334,
+    "text_change_rate": 1.0,
+    "mean_pass1_commitment": 0.6587500000000001,
+    "mean_pass2_commitment": 0.6825
+  },
+  "config": {
+    "BASE_MODEL": "microsoft/phi-3-mini-4k-instruct",
+    "SFT_PATH": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+    "RUN_GSM8K": true,
+    "RUN_STRATEGYQA": true,
+    "RUN_MMLU": false,
+    "N_GSM8K": 60,
+    "N_STRATEGYQA": 60,
+    "N_MMLU_PER_SUBJECT": 15,
+    "MMLU_SUBJECTS": [
+      "abstract_algebra",
+      "college_mathematics",
+      "logical_fallacies"
+    ],
+    "PASS1_MAX_NEW": {
+      "gsm8k": 256,
+      "strategyqa": 48,
+      "mmlu": 48
+    },
+    "PASS2_MAX_NEW": {
+      "gsm8k": 256,
+      "strategyqa": 48,
+      "mmlu": 48
+    },
+    "TEMPERATURE": 0.7,
+    "TOP_P": 0.9,
+    "USE_FEWSHOT": true
+  }
+}

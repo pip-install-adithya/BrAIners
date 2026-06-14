@@ -1,0 +1,39 @@
+{
+  "naive_combined_norm": 1.8625354641699232e-05,
+  "pcgrad_combined_norm": 1.8625354641699232e-05,
+  "naive_pairwise_conflicts": 0,
+  "pcgrad_task_order": [
+    "gsm8k",
+    "strategyqa",
+    "mmlu"
+  ],
+  "pairwise_overall": [
+    {
+      "task_a": "gsm8k",
+      "task_b": "strategyqa",
+      "cosine": NaN,
+      "dot": 0.0,
+      "norm_a": 5.58760657440871e-05,
+      "norm_b": 0.0,
+      "conflict": false
+    },
+    {
+      "task_a": "gsm8k",
+      "task_b": "mmlu",
+      "cosine": NaN,
+      "dot": 0.0,
+      "norm_a": 5.58760657440871e-05,
+      "norm_b": 0.0,
+      "conflict": false
+    },
+    {
+      "task_a": "strategyqa",
+      "task_b": "mmlu",
+      "cosine": NaN,
+      "dot": 0.0,
+      "norm_a": 0.0,
+      "norm_b": 0.0,
+      "conflict": false
+    }
+  ]
+}

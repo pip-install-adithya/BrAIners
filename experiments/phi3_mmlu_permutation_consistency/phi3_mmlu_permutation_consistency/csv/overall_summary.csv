@@ -1,0 +1,2 @@
+prompt_variant,n_questions,original_accuracy,permuted_accuracy,consistency_score,content_stability,raw_bias_fraction,raw_letter_entropy,canonical_letter_entropy
+anchored,40,0.375,0.41875,0.59375,0.59375,0.4083333333333334,1.1937266624634602,0.6747610875222584

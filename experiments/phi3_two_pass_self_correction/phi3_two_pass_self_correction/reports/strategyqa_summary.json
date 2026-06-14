@@ -1,0 +1,17 @@
+{
+  "n": 60,
+  "pass1_accuracy": 0.6666666666666666,
+  "pass2_accuracy": 0.5,
+  "improvement_rate": 0.08333333333333333,
+  "regression_rate": 0.25,
+  "unchanged_rate": 0.6666666666666666,
+  "prediction_change_rate": 0.36666666666666664,
+  "text_change_rate": 1.0,
+  "pass1_mean_commitment": 0.6849999999999999,
+  "pass2_mean_commitment": 0.6708333333333333,
+  "pass1_mean_tokens": 47.96666666666667,
+  "pass2_mean_tokens": 48.95,
+  "pass1_mean_text_len": 161.15,
+  "pass2_mean_text_len": 161.33333333333334,
+  "task": "strategyqa"
+}

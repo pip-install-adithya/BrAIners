@@ -1,0 +1,4 @@
+task,orig_norm,proj_norm,norm_change
+gsm8k,5.58760657440871e-05,5.58760657440871e-05,0.0
+strategyqa,0.0,0.0,0.0
+mmlu,0.0,0.0,0.0

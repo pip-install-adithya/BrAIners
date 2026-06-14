@@ -1,0 +1,26 @@
+[
+  {
+    "mode": "anchored",
+    "n": 40,
+    "clean_accuracy": 0.125,
+    "corrupt_accuracy": 0.15,
+    "clean_gold_logprob_mean": -1.4493186324834824,
+    "corrupt_gold_logprob_mean": -1.4458463549613954,
+    "delta_gold_logprob_mean": -0.0034722775220870973,
+    "delta_target_logit_mean": 0.02265625,
+    "avg_clean_prompt_len": 196.45,
+    "avg_corrupt_prompt_len": 196.7
+  },
+  {
+    "mode": "plain",
+    "n": 40,
+    "clean_accuracy": 0.15,
+    "corrupt_accuracy": 0.15,
+    "clean_gold_logprob_mean": -1.804763239622116,
+    "corrupt_gold_logprob_mean": -1.7962473243474961,
+    "delta_gold_logprob_mean": -0.008515915274620056,
+    "delta_target_logit_mean": -0.03828125,
+    "avg_clean_prompt_len": 192.45,
+    "avg_corrupt_prompt_len": 192.7
+  }
+]

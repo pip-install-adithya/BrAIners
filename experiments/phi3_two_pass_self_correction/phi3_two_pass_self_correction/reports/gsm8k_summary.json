@@ -1,0 +1,17 @@
+{
+  "n": 60,
+  "pass1_accuracy": 0.5,
+  "pass2_accuracy": 0.3,
+  "improvement_rate": 0.03333333333333333,
+  "regression_rate": 0.23333333333333334,
+  "unchanged_rate": 0.7333333333333333,
+  "prediction_change_rate": 0.6,
+  "text_change_rate": 1.0,
+  "pass1_mean_commitment": 0.6325000000000001,
+  "pass2_mean_commitment": 0.6941666666666666,
+  "pass1_mean_tokens": 204.4,
+  "pass2_mean_tokens": 256.6,
+  "pass1_mean_text_len": 431.3833333333333,
+  "pass2_mean_text_len": 563.0666666666667,
+  "task": "gsm8k"
+}
