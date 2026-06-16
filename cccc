@@ -1,0 +1,578 @@
+[33m40f2d54[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Advanced Experiments - Permutation Lattice + Self-Correction Basin + Task Geometry
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../mmlu_lattice_abstract_algebra_n8_seed42.json   |     1 [32m+[m
+ ...mmlu_lattice_college_mathematics_n8_seed42.json |     1 [32m+[m
+ .../cache/mmlu_lattice_formal_logic_n8_seed42.json |     1 [32m+[m
+ ..._lattice_high_school_mathematics_n8_seed42.json |     1 [32m+[m
+ .../mmlu_lattice_logical_fallacies_n8_seed42.json  |     1 [32m+[m
+ .../csv/all_results.csv                            | 66499 [32m++++++++++++++++++[m
+ .../csv/question_summary.csv                       |    53 [32m+[m
+ .../csv/style_factor_matrix.csv                    |     4 [32m+[m
+ .../csv/style_summary.csv                          |     4 [32m+[m
+ .../csv/subject_summary.csv                        |     6 [32m+[m
+ .../plots/abstract_algebra_dla_dendrogram.png      |   Bin [31m0[m -> [32m57248[m bytes
+ .../plots/abstract_algebra_dla_surface_3d.png      |   Bin [31m0[m -> [32m315467[m bytes
+ .../plots/college_mathematics_dla_dendrogram.png   |   Bin [31m0[m -> [32m57328[m bytes
+ .../plots/college_mathematics_dla_surface_3d.png   |   Bin [31m0[m -> [32m314878[m bytes
+ .../plots/entropy_vs_invariance_hexbin.png         |   Bin [31m0[m -> [32m82049[m bytes
+ .../plots/formal_logic_dla_dendrogram.png          |   Bin [31m0[m -> [32m57016[m bytes
+ .../plots/formal_logic_dla_surface_3d.png          |   Bin [31m0[m -> [32m312879[m bytes
+ .../high_school_mathematics_dla_dendrogram.png     |   Bin [31m0[m -> [32m58312[m bytes
+ .../high_school_mathematics_dla_surface_3d.png     |   Bin [31m0[m -> [32m315455[m bytes
+ .../plots/logical_fallacies_dla_dendrogram.png     |   Bin [31m0[m -> [32m56837[m bytes
+ .../plots/logical_fallacies_dla_surface_3d.png     |   Bin [31m0[m -> [32m314187[m bytes
+ .../plots/question_permutation_entropy_hist.png    |   Bin [31m0[m -> [32m35142[m bytes
+ .../plots/question_stability_scores.png            |   Bin [31m0[m -> [32m121069[m bytes
+ .../plots/stability_vs_accuracy_scatter.png        |   Bin [31m0[m -> [32m56928[m bytes
+ .../plots/style_metric_heatmap.png                 |   Bin [31m0[m -> [32m100390[m bytes
+ .../plots/style_summary_dashboard.png              |   Bin [31m0[m -> [32m107167[m bytes
+ .../plots/subject_metric_heatmap.png               |   Bin [31m0[m -> [32m117591[m bytes
+ .../plots/subject_ridgeline.png                    |   Bin [31m0[m -> [32m135223[m bytes
+ .../cache/strategyqa_test_basin_n120_seed42.json   |     1 [32m+[m
+ .../cache/strategyqa_train_basin_n120_seed42.json  |     1 [32m+[m
+ .../csv/all_results.csv                            | 67935 [32m+++++++++++++++++++[m
+ .../csv/all_results_with_calibration.csv           | 67935 [32m+++++++++++++++++++[m
+ .../csv/basin_class_counts.csv                     |     6 [32m+[m
+ .../csv/basin_summary.csv                          |     8 [32m+[m
+ .../csv/question_summary.csv                       |   121 [32m+[m
+ .../csv/question_variant_grid.csv                  |   841 [32m+[m
+ .../csv/raw_variant_rows.csv                       | 67935 [32m+++++++++++++++++++[m
+ .../csv/threshold_search.csv                       |  2815 [32m+[m
+ .../csv/transition_counts.csv                      |    29 [32m+[m
+ .../csv/variant_summary.csv                        |     8 [32m+[m
+ .../html/sankey_anchored_reason.html               |    14 [32m+[m
+ .../html/sankey_plain.html                         |    14 [32m+[m
+ .../plots/accuracy_comparison_grouped.png          |   Bin [31m0[m -> [32m105276[m bytes
+ .../plots/all_variants_flip_basin.png              |   Bin [31m0[m -> [32m53298[m bytes
+ .../plots/all_variants_improvement_basin.png       |   Bin [31m0[m -> [32m49745[m bytes
+ .../plots/all_variants_pass2_correct_basin.png     |   Bin [31m0[m -> [32m52385[m bytes
+ .../plots/all_variants_regression_basin.png        |   Bin [31m0[m -> [32m50322[m bytes
+ .../plots/baseline_flip_basin.png                  |   Bin [31m0[m -> [32m49975[m bytes
+ .../plots/baseline_improvement_basin.png           |   Bin [31m0[m -> [32m49958[m bytes
+ .../plots/baseline_pass2_correct_basin.png         |   Bin [31m0[m -> [32m52679[m bytes
+ .../plots/baseline_regression_basin.png            |   Bin [31m0[m -> [32m50425[m bytes
+ .../plots/basin_atlas_all_variants.png             |   Bin [31m0[m -> [32m578192[m bytes
+ .../plots/basin_atlas_baseline.png                 |   Bin [31m0[m -> [32m339032[m bytes
+ .../plots/basin_class_counts.png                   |   Bin [31m0[m -> [32m89017[m bytes
+ .../plots/bifurcation_all_variants.png             |   Bin [31m0[m -> [32m295485[m bytes
+ .../plots/drift_vs_delta_logodds.png               |   Bin [31m0[m -> [32m69847[m bytes
+ .../plots/entropy_vs_improvement.png               |   Bin [31m0[m -> [32m51472[m bytes
+ .../plots/overall_dashboard.png                    |   Bin [31m0[m -> [32m251624[m bytes
+ .../plots/phase_portrait_baseline.png              |   Bin [31m0[m -> [32m123706[m bytes
+ .../plots/question_glyph_atlas_all.png             |   Bin [31m0[m -> [32m427387[m bytes
+ .../plots/question_response_drift_hist.png         |   Bin [31m0[m -> [32m31940[m bytes
+ .../plots/question_stability_scores.png            |   Bin [31m0[m -> [32m91030[m bytes
+ .../plots/question_transition_entropy_hist.png     |   Bin [31m0[m -> [32m32951[m bytes
+ .../plots/reliability_anchored_reason_pass1.png    |   Bin [31m0[m -> [32m115902[m bytes
+ .../plots/reliability_anchored_reason_pass2.png    |   Bin [31m0[m -> [32m82379[m bytes
+ .../plots/reliability_plain_pass1.png              |   Bin [31m0[m -> [32m97686[m bytes
+ .../plots/reliability_plain_pass2.png              |   Bin [31m0[m -> [32m80760[m bytes
+ .../plots/representative_trajectories_all.png      |   Bin [31m0[m -> [32m722685[m bytes
+ .../plots/response_drift_all_variants.png          |   Bin [31m0[m -> [32m301829[m bytes
+ .../plots/response_drift_baseline.png              |   Bin [31m0[m -> [32m121883[m bytes
+ .../plots/self_correction_waterfall.png            |   Bin [31m0[m -> [32m92641[m bytes
+ .../plots/stability_vs_pass2_accuracy.png          |   Bin [31m0[m -> [32m52703[m bytes
+ .../plots/strip_transitions_all_variants.png       |   Bin [31m0[m -> [32m765467[m bytes
+ .../plots/strip_transitions_baseline.png           |   Bin [31m0[m -> [32m695315[m bytes
+ .../plots/trajectory_field_all_variants.png        |   Bin [31m0[m -> [32m369355[m bytes
+ .../plots/trajectory_field_baseline.png            |   Bin [31m0[m -> [32m339574[m bytes
+ .../plots/transition_heatmap_baseline.png          |   Bin [31m0[m -> [32m62811[m bytes
+ .../plots/variant_metric_heatmap.png               |   Bin [31m0[m -> [32m150914[m bytes
+ .../plots/variant_metrics_dashboard.png            |   Bin [31m0[m -> [32m271535[m bytes
+ .../plots/violin_delta_logodds.png                 |   Bin [31m0[m -> [32m167981[m bytes
+ .../plots/violin_pass1_logodds.png                 |   Bin [31m0[m -> [32m147377[m bytes
+ .../plots/violin_pass2_logodds.png                 |   Bin [31m0[m -> [32m157221[m bytes
+ .../reports/overall_summary.json                   |    14 [32m+[m
+ .../reports/report.md                              |    57 [32m+[m
+ .../reports/summary.json                           |  3389 [32m+[m
+ .../reports/thresholds.json                        |    30 [32m+[m
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/gsm8k_geometry_atlas_n30_seed42.json     |     1 [32m+[m
+ ...geometry_atlas_abstract_algebra_n12_seed42.json |     1 [32m+[m
+ ...metry_atlas_college_mathematics_n12_seed42.json |     1 [32m+[m
+ ...mlu_geometry_atlas_formal_logic_n12_seed42.json |     1 [32m+[m
+ ...y_atlas_high_school_mathematics_n12_seed42.json |     1 [32m+[m
+ ...eometry_atlas_logical_fallacies_n12_seed42.json |     1 [32m+[m
+ .../strategyqa_geometry_atlas_n30_seed42.json      |     1 [32m+[m
+ .../csv/pairwise_layer_distance_long.csv           |   100 [32m+[m
+ .../csv/principal_direction_drift.csv              |    97 [32m+[m
+ .../csv/representative_embedding_points.csv        |    36 [32m+[m
+ .../csv/sample_layerwise_features.csv              |  2830 [32m+[m
+ .../task_geometry_atlas/csv/subject_summary.csv    |     8 [32m+[m
+ .../csv/task_centroids_by_layer.csv                |   100 [32m+[m
+ .../csv/task_pairwise_layer_distances.csv          |   100 [32m+[m
+ .../task_geometry_atlas/csv/task_summary.csv       |     4 [32m+[m
+ .../task_geometry_atlas/npz/geometry_matrices.npz  |   Bin [31m0[m -> [32m2652[m bytes
+ .../npz/layerwise_embeddings.npz                   |   Bin [31m0[m -> [32m28672753[m bytes
+ .../plots/accuracy_and_margin_dashboard.png        |   Bin [31m0[m -> [32m116881[m bytes
+ .../plots/cka_layers_dashboard.png                 |   Bin [31m0[m -> [32m99824[m bytes
+ .../plots/cka_pairwise_layer_heatmap.png           |   Bin [31m0[m -> [32m101037[m bytes
+ .../plots/final_centroid_separation_heatmap.png    |   Bin [31m0[m -> [32m65123[m bytes
+ .../plots/final_layer_embedding_cloud.png          |   Bin [31m0[m -> [32m73769[m bytes
+ .../plots/final_layer_similarity_ridges.png        |   Bin [31m0[m -> [32m56426[m bytes
+ .../plots/layerwise_geometry_summary.png           |   Bin [31m0[m -> [32m77446[m bytes
+ .../plots/pairwise_centroid_distance_dashboard.png |   Bin [31m0[m -> [32m230641[m bytes
+ .../plots/principal_direction_drift_dashboard.png  |   Bin [31m0[m -> [32m151353[m bytes
+ .../plots/sample_feature_correlation.png           |   Bin [31m0[m -> [32m114175[m bytes
+ .../plots/subspace_overlap_ribbon.png              |   Bin [31m0[m -> [32m128328[m bytes
+ .../plots/task_centroid_trajectories.png           |   Bin [31m0[m -> [32m193941[m bytes
+ .../plots/task_centroid_trajectory_pca.png         |   Bin [31m0[m -> [32m193941[m bytes
+ .../plots/task_geometry_atlas_dashboard.png        |   Bin [31m0[m -> [32m469946[m bytes
+ .../plots/task_manifold_3d_final.png               |   Bin [31m0[m -> [32m298628[m bytes
+ .../plots/task_manifold_final_layer.png            |   Bin [31m0[m -> [32m73917[m bytes
+ .../plots/task_taxonomy_dendrogram.png             |   Bin [31m0[m -> [32m46844[m bytes
+ .../plots/violin_target_margin.png                 |   Bin [31m0[m -> [32m107476[m bytes
+ .../plots/violin_target_prob.png                   |   Bin [31m0[m -> [32m99460[m bytes
+ .../task_geometry_atlas/reports/metadata.json      |    21 [32m+[m
+ .../task_geometry_atlas/reports/report.md          |    33 [32m+[m
+ .../task_geometry_atlas/reports/summary.json       |   161 [32m+[m
+ 127 files changed, 281223 insertions(+)
+[33m56d81ca[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Advanced Experiments - Counterfactual and Stability Phase
+ .../.virtual_documents/__notebook_source__.ipynb   |   625 [32m+[m
+ .../phi3_prompt_surgery_atlas/csv/all_results.csv  |   379 [32m+[m
+ .../csv/variant_summary.csv                        |    28 [32m+[m
+ .../plots/gsm8k_content_dla_heatmap.png            |   Bin [31m0[m -> [32m80846[m bytes
+ .../plots/gsm8k_dla_dendrogram.png                 |   Bin [31m0[m -> [32m97441[m bytes
+ .../plots/gsm8k_dla_surface_3d.png                 |   Bin [31m0[m -> [32m389455[m bytes
+ .../plots/gsm8k_phase_vector_field.png             |   Bin [31m0[m -> [32m123743[m bytes
+ .../plots/mmlu_content_dla_heatmap.png             |   Bin [31m0[m -> [32m77576[m bytes
+ .../plots/mmlu_dla_dendrogram.png                  |   Bin [31m0[m -> [32m92913[m bytes
+ .../plots/mmlu_dla_surface_3d.png                  |   Bin [31m0[m -> [32m383335[m bytes
+ .../plots/mmlu_phase_vector_field.png              |   Bin [31m0[m -> [32m156244[m bytes
+ .../plots/overall_variant_radar.png                |   Bin [31m0[m -> [32m202486[m bytes
+ .../plots/strategyqa_content_dla_heatmap.png       |   Bin [31m0[m -> [32m82200[m bytes
+ .../plots/strategyqa_dla_dendrogram.png            |   Bin [31m0[m -> [32m98700[m bytes
+ .../plots/strategyqa_dla_surface_3d.png            |   Bin [31m0[m -> [32m378336[m bytes
+ .../plots/strategyqa_phase_vector_field.png        |   Bin [31m0[m -> [32m174607[m bytes
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/strategyqa_test_phase_n120_seed42.json   |     1 [32m+[m
+ .../strategyqa_validation_phase_n120_seed42.json   |     1 [32m+[m
+ .../csv/StrategyQA_pass1_sankey_links.csv          |    28 [32m+[m
+ .../csv/StrategyQA_pass2_sankey_links.csv          |    18 [32m+[m
+ .../csv/all_results.csv                            | 65549 [32m+++++++++++++++++++[m
+ .../csv/question_summary.csv                       |   121 [32m+[m
+ .../csv/question_summary_rows.csv                  |   121 [32m+[m
+ .../csv/reliability_pass1_baseline.csv             |     9 [32m+[m
+ .../csv/reliability_pass2_baseline.csv             |     6 [32m+[m
+ .../csv/threshold_search.csv                       |  2815 [32m+[m
+ .../csv/transition_counts.csv                      |    29 [32m+[m
+ .../csv/variant_pivot_summary.csv                  |     8 [32m+[m
+ .../csv/variant_rows.csv                           | 65429 [32m++++++++++++++++++[m
+ .../csv/variant_summary.csv                        |     8 [32m+[m
+ .../html/sankey_pass1_baseline.html                |    14 [32m+[m
+ .../html/sankey_pass2_baseline.html                |    14 [32m+[m
+ .../plots/bifurcation_hexbin_all_variants.png      |   Bin [31m0[m -> [32m117966[m bytes
+ .../plots/entropy_vs_improvement.png               |   Bin [31m0[m -> [32m50559[m bytes
+ .../plots/overall_variant_dashboard.png            |   Bin [31m0[m -> [32m227445[m bytes
+ .../plots/pass1_logodds_hist.png                   |   Bin [31m0[m -> [32m36656[m bytes
+ .../plots/pass2_logodds_hist.png                   |   Bin [31m0[m -> [32m36589[m bytes
+ .../plots/phase_portrait_baseline.png              |   Bin [31m0[m -> [32m147001[m bytes
+ .../plots/phase_space_3d_trajectories.png          |   Bin [31m0[m -> [32m405541[m bytes
+ .../plots/question_stability_scores.png            |   Bin [31m0[m -> [32m85852[m bytes
+ .../plots/reliability_pass1_baseline.png           |   Bin [31m0[m -> [32m99939[m bytes
+ .../plots/reliability_pass2_baseline.png           |   Bin [31m0[m -> [32m86298[m bytes
+ .../plots/stability_vs_pass2_accuracy.png          |   Bin [31m0[m -> [32m55844[m bytes
+ .../plots/transition_entropy_hist.png              |   Bin [31m0[m -> [32m29306[m bytes
+ .../plots/transition_heatmap_baseline.png          |   Bin [31m0[m -> [32m46953[m bytes
+ .../plots/variant_logodds_ridgeplot.png            |   Bin [31m0[m -> [32m176026[m bytes
+ .../plots/variant_metric_map.png                   |   Bin [31m0[m -> [32m116590[m bytes
+ .../plots/variant_radar_fingerprint.png            |   Bin [31m0[m -> [32m347704[m bytes
+ .../reports/overall_summary.json                   |    15 [32m+[m
+ .../reports/thresholds.json                        |    30 [32m+[m
+ 51 files changed, 135249 insertions(+)
+[33m512fe69[m More Baseline Experiment Results
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/gsm8k_consistency_n40_seed42.json        |     1 [32m+[m
+ .../csv/anchored_top_heads.csv                     |    13 [32m+[m
+ .../csv/attention_head_agg.csv                     |   321 [32m+[m
+ .../csv/attention_layer_agg.csv                    |    65 [32m+[m
+ .../csv/attention_rows.csv                         | 15361 [32m+++++++++++++++++++[m
+ .../csv/dla_layer_agg.csv                          |    67 [32m+[m
+ .../phi3_consistency_head_eap/csv/dla_rows.csv     |  2641 [32m++++[m
+ .../csv/eap_layer_agg.csv                          |    21 [32m+[m
+ .../phi3_consistency_head_eap/csv/eap_rows.csv     |   801 [32m+[m
+ .../csv/patch_layer_agg.csv                        |    11 [32m+[m
+ .../phi3_consistency_head_eap/csv/patch_rows.csv   |   401 [32m+[m
+ .../csv/plain_top_heads.csv                        |    13 [32m+[m
+ .../phi3_consistency_head_eap/csv/samples.csv      |  2660 [32m++++[m
+ .../phi3_consistency_head_eap/csv/summary.csv      |     3 [32m+[m
+ .../phi3_consistency_head_eap/csv/tokenization.csv |    81 [32m+[m
+ .../plots/anchored_accuracy_bar.png                |   Bin [31m0[m -> [32m36627[m bytes
+ .../plots/anchored_attention_curve.png             |   Bin [31m0[m -> [32m100004[m bytes
+ .../plots/anchored_consistency_head_3d.png         |   Bin [31m0[m -> [32m395219[m bytes
+ .../plots/anchored_consistency_head_heatmap.png    |   Bin [31m0[m -> [32m80729[m bytes
+ .../plots/anchored_dla_curve.png                   |   Bin [31m0[m -> [32m71586[m bytes
+ .../plots/anchored_dla_delta_violin.png            |   Bin [31m0[m -> [32m124696[m bytes
+ .../plots/anchored_eap_curve.png                   |   Bin [31m0[m -> [32m93038[m bytes
+ .../plots/anchored_gold_logprob_bar.png            |   Bin [31m0[m -> [32m41540[m bytes
+ .../plots/anchored_metric_correlations.png         |   Bin [31m0[m -> [32m125044[m bytes
+ .../plots/anchored_patch_recovery_curve.png        |   Bin [31m0[m -> [32m55671[m bytes
+ .../plots/anchored_patch_recovery_heatmap.png      |   Bin [31m0[m -> [32m41006[m bytes
+ .../plots/anchored_target_logit_delta_bar.png      |   Bin [31m0[m -> [32m32078[m bytes
+ .../plots/anchored_token_length_hist.png           |   Bin [31m0[m -> [32m31721[m bytes
+ .../plots/plain_accuracy_bar.png                   |   Bin [31m0[m -> [32m34986[m bytes
+ .../plots/plain_attention_curve.png                |   Bin [31m0[m -> [32m97406[m bytes
+ .../plots/plain_consistency_head_3d.png            |   Bin [31m0[m -> [32m373454[m bytes
+ .../plots/plain_consistency_head_heatmap.png       |   Bin [31m0[m -> [32m83954[m bytes
+ .../plots/plain_dla_curve.png                      |   Bin [31m0[m -> [32m71777[m bytes
+ .../plots/plain_dla_delta_violin.png               |   Bin [31m0[m -> [32m145186[m bytes
+ .../plots/plain_eap_curve.png                      |   Bin [31m0[m -> [32m78242[m bytes
+ .../plots/plain_gold_logprob_bar.png               |   Bin [31m0[m -> [32m42902[m bytes
+ .../plots/plain_metric_correlations.png            |   Bin [31m0[m -> [32m122674[m bytes
+ .../plots/plain_patch_recovery_curve.png           |   Bin [31m0[m -> [32m61275[m bytes
+ .../plots/plain_patch_recovery_heatmap.png         |   Bin [31m0[m -> [32m37515[m bytes
+ .../plots/plain_target_logit_delta_bar.png         |   Bin [31m0[m -> [32m39181[m bytes
+ .../plots/plain_token_length_hist.png              |   Bin [31m0[m -> [32m29706[m bytes
+ .../phi3_consistency_head_eap/reports/report.md    |    34 [32m+[m
+ .../phi3_consistency_head_eap/reports/summary.json |    26 [32m+[m
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/mmlu_abstract_algebra_n8_seed42.json     |     1 [32m+[m
+ .../cache/mmlu_college_mathematics_n8_seed42.json  |     1 [32m+[m
+ .../cache/mmlu_formal_logic_n8_seed42.json         |     1 [32m+[m
+ .../mmlu_high_school_mathematics_n8_seed42.json    |     1 [32m+[m
+ .../cache/mmlu_logical_fallacies_n8_seed42.json    |     1 [32m+[m
+ .../csv/canonical_letter_distribution.csv          |     5 [32m+[m
+ .../csv/confusion_matrix.csv                       |     5 [32m+[m
+ .../csv/overall_summary.csv                        |     2 [32m+[m
+ .../csv/permutation_results.csv                    | 13487 [32m++++++++++++++++[m
+ .../csv/question_summary.csv                       |    41 [32m+[m
+ .../csv/question_summary_raw.csv                   |    53 [32m+[m
+ .../csv/raw_letter_distribution.csv                |     5 [32m+[m
+ .../csv/subject_summary.csv                        |     6 [32m+[m
+ .../csv/top_bias_questions.csv                     |    23 [32m+[m
+ .../csv/top_unstable_questions.csv                 |    29 [32m+[m
+ .../plots/canonical_letter_distribution.png        |   Bin [31m0[m -> [32m32157[m bytes
+ .../plots/confusion_matrix_heatmap.png             |   Bin [31m0[m -> [32m49493[m bytes
+ .../plots/consistency_histogram.png                |   Bin [31m0[m -> [32m33239[m bytes
+ .../plots/consistency_score_by_prompt_variant.png  |   Bin [31m0[m -> [32m31492[m bytes
+ .../plots/consistency_vs_accuracy_hexbin.png       |   Bin [31m0[m -> [32m83542[m bytes
+ .../plots/content_stability_by_prompt_variant.png  |   Bin [31m0[m -> [32m30285[m bytes
+ .../plots/original_accuracy_by_prompt_variant.png  |   Bin [31m0[m -> [32m36867[m bytes
+ .../plots/permuted_accuracy_by_prompt_variant.png  |   Bin [31m0[m -> [32m36778[m bytes
+ .../plots/positional_bias_heatmap.png              |   Bin [31m0[m -> [32m69447[m bytes
+ .../plots/radar_chart_anchored.png                 |   Bin [31m0[m -> [32m226736[m bytes
+ .../plots/raw_bias_fraction_by_prompt_variant.png  |   Bin [31m0[m -> [32m34874[m bytes
+ .../plots/raw_letter_distribution.png              |   Bin [31m0[m -> [32m32109[m bytes
+ .../plots/subject_consistency_score.png            |   Bin [31m0[m -> [32m92182[m bytes
+ .../plots/subject_content_stability.png            |   Bin [31m0[m -> [32m90569[m bytes
+ .../plots/subject_original_accuracy.png            |   Bin [31m0[m -> [32m91838[m bytes
+ .../plots/subject_permuted_accuracy.png            |   Bin [31m0[m -> [32m92145[m bytes
+ .../plots/subject_raw_bias_fraction.png            |   Bin [31m0[m -> [32m91084[m bytes
+ .../reports/report.md                              |    32 [32m+[m
+ .../reports/summary.json                           |    85 [32m+[m
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/strategyqa_test_n200_seed42.json         |     1 [32m+[m
+ .../cache/strategyqa_validation_n200_seed42.json   |     1 [32m+[m
+ .../csv/calibration_scores.csv                     |   401 [32m+[m
+ .../csv/confusion_matrix_calibrated.csv            |     3 [32m+[m
+ .../csv/confusion_matrix_raw.csv                   |     3 [32m+[m
+ .../csv/overall_summary.csv                        |     3 [32m+[m
+ .../csv/reliability_bins.csv                       |    21 [32m+[m
+ .../csv/strategyqa_results.csv                     |  4395 [32m++++++[m
+ .../csv/threshold_search.csv                       |   403 [32m+[m
+ .../csv/variant_summary.csv                        |     3 [32m+[m
+ .../plots/accuracy_bar_anchored.png                |   Bin [31m0[m -> [32m26455[m bytes
+ .../plots/accuracy_bar_plain.png                   |   Bin [31m0[m -> [32m25143[m bytes
+ .../plots/commitment_bar_anchored.png              |   Bin [31m0[m -> [32m28612[m bytes
+ .../plots/commitment_bar_plain.png                 |   Bin [31m0[m -> [32m28738[m bytes
+ .../plots/commitment_hist_anchored.png             |   Bin [31m0[m -> [32m37956[m bytes
+ .../plots/commitment_hist_plain.png                |   Bin [31m0[m -> [32m35553[m bytes
+ .../plots/completion_length_anchored.png           |   Bin [31m0[m -> [32m36982[m bytes
+ .../plots/completion_length_plain.png              |   Bin [31m0[m -> [32m34954[m bytes
+ .../plots/logodds_hist_anchored.png                |   Bin [31m0[m -> [32m32757[m bytes
+ .../plots/logodds_hist_plain.png                   |   Bin [31m0[m -> [32m30898[m bytes
+ .../plots/logodds_violin_by_class_anchored.png     |   Bin [31m0[m -> [32m87768[m bytes
+ .../plots/logodds_violin_by_class_plain.png        |   Bin [31m0[m -> [32m85892[m bytes
+ .../logodds_vs_commitment_hexbin_anchored.png      |   Bin [31m0[m -> [32m88969[m bytes
+ .../plots/logodds_vs_commitment_hexbin_plain.png   |   Bin [31m0[m -> [32m91643[m bytes
+ .../plots/metric_correlations_anchored.png         |   Bin [31m0[m -> [32m114551[m bytes
+ .../plots/metric_correlations_plain.png            |   Bin [31m0[m -> [32m123659[m bytes
+ .../plots/reliability_anchored.png                 |   Bin [31m0[m -> [32m65549[m bytes
+ .../plots/reliability_plain.png                    |   Bin [31m0[m -> [32m71880[m bytes
+ .../plots/threshold_search_anchored.png            |   Bin [31m0[m -> [32m93310[m bytes
+ .../plots/threshold_search_plain.png               |   Bin [31m0[m -> [32m87297[m bytes
+ .../plots/variant_performance_radar.png            |   Bin [31m0[m -> [32m228535[m bytes
+ .../phi3_strategyqa_calibration/reports/report.md  |    21 [32m+[m
+ .../reports/summary.json                           |    50 [32m+[m
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/gsm8k_task_interference_n5_seed42.json   |     1 [32m+[m
+ ...sk_interference_abstract_algebra_n3_seed42.json |     1 [32m+[m
+ ...interference_college_mathematics_n3_seed42.json |     1 [32m+[m
+ ...k_interference_logical_fallacies_n3_seed42.json |     1 [32m+[m
+ .../strategyqa_task_interference_n5_seed42.json    |     1 [32m+[m
+ .../csv/evaluation_summary.csv                     |     4 [32m+[m
+ .../csv/gradient_conflict_by_layer.csv             |     7 [32m+[m
+ .../csv/gradient_norms_by_layer.csv                |    19 [32m+[m
+ .../csv/gradient_overall_pairs.csv                 |     4 [32m+[m
+ .../csv/gradient_pairwise_layer_cosines.csv        |    19 [32m+[m
+ .../csv/gradient_sample_pair_cosines.csv           |   691 [32m+[m
+ .../phi3_task_interference/csv/gsm8k_eval.csv      |    42 [32m+[m
+ .../csv/gsm8k_grad_samples.csv                     |    31 [32m+[m
+ .../phi3_task_interference/csv/gsm8k_loss.csv      |     6 [32m+[m
+ .../csv/gsm8k_rep_samples.csv                      |   161 [32m+[m
+ .../csv/layerwise_gradient_vs_representation.csv   |     7 [32m+[m
+ .../phi3_task_interference/csv/mmlu_eval.csv       |   167 [32m+[m
+ .../csv/mmlu_grad_samples.csv                      |    55 [32m+[m
+ .../phi3_task_interference/csv/mmlu_loss.csv       |    10 [32m+[m
+ .../csv/mmlu_plain_baseline_eval.csv               |    73 [32m+[m
+ .../csv/mmlu_rep_samples.csv                       |   289 [32m+[m
+ .../csv/pcgrad_projection.csv                      |     4 [32m+[m
+ .../csv/representation_cka.csv                     |    97 [32m+[m
+ .../csv/representation_overall_pairs.csv           |     7 [32m+[m
+ .../csv/representation_pairwise_overlap.csv        |    97 [32m+[m
+ .../csv/representation_pca_basis_stats.csv         |    97 [32m+[m
+ .../phi3_task_interference/csv/strategyqa_eval.csv |    30 [32m+[m
+ .../csv/strategyqa_grad_samples.csv                |    31 [32m+[m
+ .../phi3_task_interference/csv/strategyqa_loss.csv |     6 [32m+[m
+ .../csv/strategyqa_rep_samples.csv                 |   161 [32m+[m
+ .../npz/gsm8k_grad_matrix.npz                      |   Bin [31m0[m -> [32m89526[m bytes
+ .../npz/gsm8k_rep_matrix.npz                       |   Bin [31m0[m -> [32m911939[m bytes
+ .../npz/mmlu_grad_matrix.npz                       |   Bin [31m0[m -> [32m783[m bytes
+ .../phi3_task_interference/npz/mmlu_rep_matrix.npz |   Bin [31m0[m -> [32m1642274[m bytes
+ .../npz/strategyqa_grad_matrix.npz                 |   Bin [31m0[m -> [32m641[m bytes
+ .../npz/strategyqa_rep_matrix.npz                  |   Bin [31m0[m -> [32m911939[m bytes
+ .../plots/grad_norm_gsm8k.png                      |   Bin [31m0[m -> [32m68240[m bytes
+ .../plots/grad_norm_mmlu.png                       |   Bin [31m0[m -> [32m37758[m bytes
+ .../plots/grad_norm_strategyqa.png                 |   Bin [31m0[m -> [32m42433[m bytes
+ .../plots/gradient_conflict_rate.png               |   Bin [31m0[m -> [32m46978[m bytes
+ .../gradient_conflict_vs_rep_overlap_hexbin.png    |   Bin [31m0[m -> [32m80315[m bytes
+ .../plots/gradient_cosine_gsm8k_vs_mmlu.png        |   Bin [31m0[m -> [32m40232[m bytes
+ .../plots/gradient_cosine_gsm8k_vs_strategyqa.png  |   Bin [31m0[m -> [32m44763[m bytes
+ .../plots/gradient_cosine_heatmap.png              |   Bin [31m0[m -> [32m61970[m bytes
+ .../plots/gradient_cosine_histogram.png            |   Bin [31m0[m -> [32m35260[m bytes
+ .../plots/gradient_cosine_strategyqa_vs_mmlu.png   |   Bin [31m0[m -> [32m42860[m bytes
+ .../plots/gradient_cosine_violin.png               |   Bin [31m0[m -> [32m8502[m bytes
+ .../plots/gradient_dot_gsm8k_vs_mmlu.png           |   Bin [31m0[m -> [32m43660[m bytes
+ .../plots/gradient_dot_gsm8k_vs_strategyqa.png     |   Bin [31m0[m -> [32m47898[m bytes
+ .../plots/gradient_dot_heatmap.png                 |   Bin [31m0[m -> [32m57380[m bytes
+ .../plots/gradient_dot_strategyqa_vs_mmlu.png      |   Bin [31m0[m -> [32m45909[m bytes
+ .../plots/gsm8k_accuracy.png                       |   Bin [31m0[m -> [32m37115[m bytes
+ .../phi3_task_interference/plots/gsm8k_loss.png    |   Bin [31m0[m -> [32m35282[m bytes
+ .../plots/gsm8k_loss_hist.png                      |   Bin [31m0[m -> [32m35821[m bytes
+ .../layerwise_conflict_metric_correlation.png      |   Bin [31m0[m -> [32m111776[m bytes
+ .../phi3_task_interference/plots/mmlu_accuracy.png |   Bin [31m0[m -> [32m25444[m bytes
+ .../plots/mmlu_delimiter_vs_plain_accuracy.png     |   Bin [31m0[m -> [32m29896[m bytes
+ .../phi3_task_interference/plots/mmlu_loss.png     |   Bin [31m0[m -> [32m24161[m bytes
+ .../plots/mmlu_loss_hist.png                       |   Bin [31m0[m -> [32m26437[m bytes
+ .../plots/pcgrad_combined_norm.png                 |   Bin [31m0[m -> [32m35101[m bytes
+ .../plots/pcgrad_conflicts.png                     |   Bin [31m0[m -> [32m30722[m bytes
+ .../plots/rep_centroid_cosine_heatmap.png          |   Bin [31m0[m -> [32m64516[m bytes
+ .../plots/rep_cka_gsm8k_vs_mmlu.png                |   Bin [31m0[m -> [32m71356[m bytes
+ .../plots/rep_cka_gsm8k_vs_strategyqa.png          |   Bin [31m0[m -> [32m77242[m bytes
+ .../plots/rep_cka_heatmap.png                      |   Bin [31m0[m -> [32m55788[m bytes
+ .../plots/rep_cka_strategyqa_vs_mmlu.png           |   Bin [31m0[m -> [32m86065[m bytes
+ .../plots/rep_overlap_gsm8k_vs_mmlu.png            |   Bin [31m0[m -> [32m73942[m bytes
+ .../plots/rep_overlap_gsm8k_vs_strategyqa.png      |   Bin [31m0[m -> [32m83460[m bytes
+ .../plots/rep_overlap_strategyqa_vs_mmlu.png       |   Bin [31m0[m -> [32m77806[m bytes
+ .../plots/rep_subspace_overlap_heatmap.png         |   Bin [31m0[m -> [32m61270[m bytes
+ .../plots/strategyqa_accuracy.png                  |   Bin [31m0[m -> [32m35300[m bytes
+ .../plots/strategyqa_loss.png                      |   Bin [31m0[m -> [32m26516[m bytes
+ .../plots/strategyqa_loss_hist.png                 |   Bin [31m0[m -> [32m30456[m bytes
+ .../phi3_task_interference/plots/task_accuracy.png |   Bin [31m0[m -> [32m30472[m bytes
+ .../plots/task_mean_loss.png                       |   Bin [31m0[m -> [32m28114[m bytes
+ .../plots/task_performance_radar.png               |   Bin [31m0[m -> [32m222103[m bytes
+ .../reports/gsm8k_summary.json                     |     9 [32m+[m
+ .../reports/mmlu_summary.json                      |     9 [32m+[m
+ .../reports/pcgrad_summary.json                    |    39 [32m+[m
+ .../phi3_task_interference/reports/report.md       |    50 [32m+[m
+ .../reports/strategyqa_summary.json                |     9 [32m+[m
+ .../phi3_task_interference/reports/summary.json    |   161 [32m+[m
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../cache/gsm8k_self_correction_n60_seed42.json    |     1 [32m+[m
+ .../strategyqa_self_correction_n60_seed42.json     |     1 [32m+[m
+ .../csv/all_two_pass_results.csv                   |  9289 [32m+++++++++++[m
+ .../csv/gsm8k_transition_details.csv               |  5396 [32m+++++++[m
+ .../csv/gsm8k_transition_matrix.csv                |     3 [32m+[m
+ .../csv/gsm8k_two_pass_results.csv                 |  6577 [32m++++++++[m
+ .../csv/strategyqa_transition_details.csv          |  1946 [32m+++[m
+ .../csv/strategyqa_transition_matrix.csv           |     3 [32m+[m
+ .../csv/strategyqa_two_pass_results.csv            |  2713 [32m++++[m
+ .../phi3_two_pass_self_correction/csv/summary.csv  |     3 [32m+[m
+ .../plots/gsm8k_accuracy_bar.png                   |   Bin [31m0[m -> [32m29932[m bytes
+ .../plots/gsm8k_accuracy_line.png                  |   Bin [31m0[m -> [32m75075[m bytes
+ .../plots/gsm8k_commitment_bar.png                 |   Bin [31m0[m -> [32m35459[m bytes
+ .../plots/gsm8k_commitment_delta_hist.png          |   Bin [31m0[m -> [32m35020[m bytes
+ .../plots/gsm8k_commitment_hexbin.png              |   Bin [31m0[m -> [32m75585[m bytes
+ .../plots/gsm8k_commitment_transition_violin.png   |   Bin [31m0[m -> [32m90798[m bytes
+ .../plots/gsm8k_metric_correlations.png            |   Bin [31m0[m -> [32m140475[m bytes
+ .../plots/gsm8k_pass1_length_hist.png              |   Bin [31m0[m -> [32m31579[m bytes
+ .../plots/gsm8k_pass2_length_hist.png              |   Bin [31m0[m -> [32m33527[m bytes
+ .../plots/gsm8k_reliability.png                    |   Bin [31m0[m -> [32m70339[m bytes
+ .../plots/gsm8k_transition_heatmap.png             |   Bin [31m0[m -> [32m46636[m bytes
+ .../plots/gsm8k_transition_rates.png               |   Bin [31m0[m -> [32m33600[m bytes
+ .../plots/overall_improvement_rate.png             |   Bin [31m0[m -> [32m35722[m bytes
+ .../plots/overall_pass1_accuracy.png               |   Bin [31m0[m -> [32m31561[m bytes
+ .../plots/overall_pass1_commitment.png             |   Bin [31m0[m -> [32m32566[m bytes
+ .../plots/overall_pass2_accuracy.png               |   Bin [31m0[m -> [32m29711[m bytes
+ .../plots/overall_pass2_commitment.png             |   Bin [31m0[m -> [32m32999[m bytes
+ .../plots/overall_regression_rate.png              |   Bin [31m0[m -> [32m30589[m bytes
+ .../plots/overall_task_radar.png                   |   Bin [31m0[m -> [32m245095[m bytes
+ .../plots/strategyqa_accuracy_bar.png              |   Bin [31m0[m -> [32m33683[m bytes
+ .../plots/strategyqa_accuracy_line.png             |   Bin [31m0[m -> [32m74615[m bytes
+ .../plots/strategyqa_commitment_bar.png            |   Bin [31m0[m -> [32m36552[m bytes
+ .../plots/strategyqa_commitment_delta_hist.png     |   Bin [31m0[m -> [32m35963[m bytes
+ .../plots/strategyqa_commitment_hexbin.png         |   Bin [31m0[m -> [32m75721[m bytes
+ .../strategyqa_commitment_transition_violin.png    |   Bin [31m0[m -> [32m99902[m bytes
+ .../plots/strategyqa_metric_correlations.png       |   Bin [31m0[m -> [32m142300[m bytes
+ .../plots/strategyqa_pass1_length_hist.png         |   Bin [31m0[m -> [32m32978[m bytes
+ .../plots/strategyqa_pass2_length_hist.png         |   Bin [31m0[m -> [32m33481[m bytes
+ .../plots/strategyqa_reliability.png               |   Bin [31m0[m -> [32m75226[m bytes
+ .../plots/strategyqa_transition_heatmap.png        |   Bin [31m0[m -> [32m53052[m bytes
+ .../plots/strategyqa_transition_rates.png          |   Bin [31m0[m -> [32m34915[m bytes
+ .../reports/global_summary.json                    |    78 [32m+[m
+ .../reports/gsm8k_summary.json                     |    17 [32m+[m
+ .../reports/report.md                              |    24 [32m+[m
+ .../reports/strategyqa_summary.json                |    17 [32m+[m
+ .../reports/summary.json                           |    36 [32m+[m
+ 243 files changed, 70109 insertions(+)
+[33mc2475ec[m Phi3 Delimiter Causality Experiments
+ .../__huggingface_repos__.json                     |     1 [32m+[m
+ .../all_activation_patch_layer.csv                 |   897 [32m+[m
+ .../all_activation_patch_position.csv              |   841 [32m+[m
+ .../phi3_delimiter_causality/all_attention.csv     | 29569 [32m+++++++++++++++++++[m
+ .../phi3_delimiter_causality/all_dla.csv           |   925 [32m+[m
+ .../phi3_delimiter_causality/all_samples.csv       |    32 [32m+[m
+ .../eval_cache/gsm8k_n8_seed42.json                |     1 [32m+[m
+ .../mmlu_abstract_algebra_n4_seed42.json           |     1 [32m+[m
+ .../mmlu_college_mathematics_n4_seed42.json        |     1 [32m+[m
+ .../mmlu_logical_fallacies_n4_seed42.json          |     1 [32m+[m
+ .../eval_cache/strategyqa_n8_seed42.json           |     1 [32m+[m
+ .../gsm8k/gsm8k_activation_patch_layer.csv         |   257 [32m+[m
+ .../gsm8k/gsm8k_activation_patch_layer_agg.csv     |    33 [32m+[m
+ .../gsm8k/gsm8k_activation_patch_position.csv      |   241 [32m+[m
+ .../gsm8k/gsm8k_activation_patch_position_agg.csv  |    31 [32m+[m
+ .../gsm8k/gsm8k_attention.csv                      |  8449 [32m++++++[m
+ .../gsm8k/gsm8k_attention_head_agg.csv             |  1025 [32m+[m
+ .../phi3_delimiter_causality/gsm8k/gsm8k_dla.csv   |   265 [32m+[m
+ .../gsm8k/gsm8k_dla_agg.csv                        |    34 [32m+[m
+ .../phi3_delimiter_causality/gsm8k/gsm8k_report.md |    12 [32m+[m
+ .../gsm8k/gsm8k_samples.csv                        |     9 [32m+[m
+ .../gsm8k/gsm8k_summary.json                       |    11 [32m+[m
+ .../gsm8k/gsm8k_tokenization.csv                   |     9 [32m+[m
+ .../gsm8k/gsm8k_top_attention_heads.csv            |    13 [32m+[m
+ .../mmlu/mmlu_activation_patch_layer.csv           |   385 [32m+[m
+ .../mmlu/mmlu_activation_patch_layer_agg.csv       |    33 [32m+[m
+ .../mmlu/mmlu_activation_patch_position.csv        |   361 [32m+[m
+ .../mmlu/mmlu_activation_patch_position_agg.csv    |    31 [32m+[m
+ .../mmlu/mmlu_attention.csv                        | 12673 [32m++++++++[m
+ .../mmlu/mmlu_attention_head_agg.csv               |  1025 [32m+[m
+ .../phi3_delimiter_causality/mmlu/mmlu_dla.csv     |   397 [32m+[m
+ .../phi3_delimiter_causality/mmlu/mmlu_dla_agg.csv |    34 [32m+[m
+ .../phi3_delimiter_causality/mmlu/mmlu_report.md   |    12 [32m+[m
+ .../phi3_delimiter_causality/mmlu/mmlu_samples.csv |    16 [32m+[m
+ .../mmlu/mmlu_summary.json                         |    11 [32m+[m
+ .../mmlu/mmlu_tokenization.csv                     |    13 [32m+[m
+ .../mmlu/mmlu_top_attention_heads.csv              |    13 [32m+[m
+ .../plots/gsm8k_accuracy_bar.png                   |   Bin [31m0[m -> [32m28638[m bytes
+ .../plots/gsm8k_attention_head_heatmap.png         |   Bin [31m0[m -> [32m108212[m bytes
+ .../plots/gsm8k_dla_curve.png                      |   Bin [31m0[m -> [32m81725[m bytes
+ .../plots/gsm8k_gold_logprob_bar.png               |   Bin [31m0[m -> [32m41035[m bytes
+ .../plots/gsm8k_patch_normalized_recovery.png      |   Bin [31m0[m -> [32m76876[m bytes
+ .../plots/gsm8k_patch_position_heatmap.png         |   Bin [31m0[m -> [32m36888[m bytes
+ .../plots/gsm8k_patch_recovery_curve.png           |   Bin [31m0[m -> [32m98514[m bytes
+ .../plots/gsm8k_token_length_hist.png              |   Bin [31m0[m -> [32m36543[m bytes
+ .../plots/mmlu_accuracy_bar.png                    |   Bin [31m0[m -> [32m28032[m bytes
+ .../plots/mmlu_attention_head_heatmap.png          |   Bin [31m0[m -> [32m109866[m bytes
+ .../plots/mmlu_dla_curve.png                       |   Bin [31m0[m -> [32m80221[m bytes
+ .../plots/mmlu_gold_logprob_bar.png                |   Bin [31m0[m -> [32m32197[m bytes
+ .../plots/mmlu_patch_normalized_recovery.png       |   Bin [31m0[m -> [32m74981[m bytes
+ .../plots/mmlu_patch_position_heatmap.png          |   Bin [31m0[m -> [32m38669[m bytes
+ .../plots/mmlu_patch_recovery_curve.png            |   Bin [31m0[m -> [32m86525[m bytes
+ .../plots/mmlu_token_length_hist.png               |   Bin [31m0[m -> [32m31280[m bytes
+ .../plots/strategyqa_accuracy_bar.png              |   Bin [31m0[m -> [32m31021[m bytes
+ .../plots/strategyqa_attention_head_heatmap.png    |   Bin [31m0[m -> [32m112731[m bytes
+ .../plots/strategyqa_dla_curve.png                 |   Bin [31m0[m -> [32m82772[m bytes
+ .../plots/strategyqa_gold_logprob_bar.png          |   Bin [31m0[m -> [32m36015[m bytes
+ .../plots/strategyqa_patch_normalized_recovery.png |   Bin [31m0[m -> [32m75663[m bytes
+ .../plots/strategyqa_patch_position_heatmap.png    |   Bin [31m0[m -> [32m39867[m bytes
+ .../plots/strategyqa_patch_recovery_curve.png      |   Bin [31m0[m -> [32m85931[m bytes
+ .../plots/strategyqa_token_length_hist.png         |   Bin [31m0[m -> [32m44832[m bytes
+ .../phi3_delimiter_causality/reports/summary.json  |    55 [32m+[m
+ .../phi3_delimiter_causality/reports/summary.md    |    22 [32m+[m
+ .../strategyqa_activation_patch_layer.csv          |   257 [32m+[m
+ .../strategyqa_activation_patch_layer_agg.csv      |    33 [32m+[m
+ .../strategyqa_activation_patch_position.csv       |   241 [32m+[m
+ .../strategyqa_activation_patch_position_agg.csv   |    31 [32m+[m
+ .../strategyqa/strategyqa_attention.csv            |  8449 [32m++++++[m
+ .../strategyqa/strategyqa_attention_head_agg.csv   |  1025 [32m+[m
+ .../strategyqa/strategyqa_dla.csv                  |   265 [32m+[m
+ .../strategyqa/strategyqa_dla_agg.csv              |    34 [32m+[m
+ .../strategyqa/strategyqa_report.md                |    12 [32m+[m
+ .../strategyqa/strategyqa_samples.csv              |     9 [32m+[m
+ .../strategyqa/strategyqa_summary.json             |    11 [32m+[m
+ .../strategyqa/strategyqa_tokenization.csv         |     9 [32m+[m
+ .../strategyqa/strategyqa_top_attention_heads.csv  |    13 [32m+[m
+ 76 files changed, 68129 insertions(+)
+[33mcc64046[m Main SFT Adapter + Collection of old trained adapters
+ .../phi-grpo_trl_1/__huggingface_repos__.json      |      1 [32m+[m
+ .../phi-grpo_trl_1/phi3_grpo_best/README.md        |    207 [32m+[m
+ .../phi3_grpo_best/adapter_config.json             |     43 [32m+[m
+ .../phi3_grpo_best/adapter_model.safetensors       |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi3_grpo_best/chat_template.jinja             |      8 [32m+[m
+ .../phi-grpo_trl_1/phi3_grpo_best/tokenizer.json   | 277210 [32m+++++++++++++++++[m
+ .../phi3_grpo_best/tokenizer_config.json           |     15 [32m+[m
+ .../phi3_grpo_1/__huggingface_repos__.json         |      1 [32m+[m
+ .../phi3_grpo_1/phi3_grpo_final/README.md          |    207 [32m+[m
+ .../phi3_grpo_final/adapter_config.json            |     43 [32m+[m
+ .../phi3_grpo_final/adapter_model.safetensors      |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi3_grpo_final/chat_template.jinja            |      8 [32m+[m
+ .../phi3_grpo_1/phi3_grpo_final/tokenizer.json     | 277210 [32m+++++++++++++++++[m
+ .../phi3_grpo_final/tokenizer_config.json          |     15 [32m+[m
+ .../__huggingface_repos__.json                     |      1 [32m+[m
+ .../phi3_grpo_reasonedge_v2/README.md              |    207 [32m+[m
+ .../phi3_grpo_reasonedge_v2/adapter_config.json    |     43 [32m+[m
+ .../adapter_model.safetensors                      |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi3_grpo_trl_1/__huggingface_repos__.json     |      1 [32m+[m
+ .../phi3_grpo_trl_1/phi3_grpo_best_v2/README.md    |    207 [32m+[m
+ .../phi3_grpo_best_v2/adapter_config.json          |     43 [32m+[m
+ .../phi3_grpo_best_v2/adapter_model.safetensors    |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi3_grpo_best_v2/chat_template.jinja          |      8 [32m+[m
+ .../phi3_grpo_best_v2/tokenizer.json               | 277210 [32m+++++++++++++++++[m
+ .../phi3_grpo_best_v2/tokenizer_config.json        |     15 [32m+[m
+ .../phi3_grpo_trl_2/__huggingface_repos__.json     |      1 [32m+[m
+ .../phi3_grpo_trl_2/phi3_grpo_best_v2/README.md    |    207 [32m+[m
+ .../phi3_grpo_best_v2/adapter_config.json          |     43 [32m+[m
+ .../phi3_grpo_best_v2/adapter_model.safetensors    |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi3_grpo_best_v2/chat_template.jinja          |      8 [32m+[m
+ .../phi3_grpo_best_v2/tokenizer.json               | 277210 [32m+++++++++++++++++[m
+ .../phi3_grpo_best_v2/tokenizer_config.json        |     15 [32m+[m
+ .../__huggingface_repos__.json                     |      1 [32m+[m
+ .../phi3_grpo_best_v3/README.md                    |    207 [32m+[m
+ .../phi3_grpo_best_v3/adapter_config.json          |     43 [32m+[m
+ .../phi3_grpo_best_v3/adapter_model.safetensors    |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi3_grpo_best_v3/chat_template.jinja          |      8 [32m+[m
+ .../phi3_grpo_best_v3/tokenizer.json               | 277210 [32m+++++++++++++++++[m
+ .../phi3_grpo_best_v3/tokenizer_config.json        |     15 [32m+[m
+ phi3_adapters/phi3_sft_lora/README.md              |    207 [32m+[m
+ phi3_adapters/phi3_sft_lora/adapter_config.json    |     43 [32m+[m
+ .../phi3_sft_lora/adapter_model.safetensors        |    Bin [31m0[m -> [32m12591456[m bytes
+ phi3_adapters/phi3_sft_lora/chat_template.jinja    |      8 [32m+[m
+ phi3_adapters/phi3_sft_lora/tokenizer.json         | 277224 [32m++++++++++++++++++[m
+ phi3_adapters/phi3_sft_lora/tokenizer_config.json  |     15 [32m+[m
+ .../phi_grpo_2/__huggingface_repos__.json          |      1 [32m+[m
+ phi3_adapters/phi_grpo_2/phi3_grpo_best/README.md  |    207 [32m+[m
+ .../phi_grpo_2/phi3_grpo_best/adapter_config.json  |     43 [32m+[m
+ .../phi3_grpo_best/adapter_model.safetensors       |    Bin [31m0[m -> [32m12591456[m bytes
+ .../phi_grpo_2/phi3_grpo_best/chat_template.jinja  |      8 [32m+[m
+ .../phi_grpo_2/phi3_grpo_best/tokenizer.json       | 277210 [32m+++++++++++++++++[m
+ .../phi3_grpo_best/tokenizer_config.json           |     15 [32m+[m
+ 52 files changed, 1942652 insertions(+)
+[33m46eee42[m Updated parser for Evaluator
+ da-phi3-benchmarker.ipynb | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+[33m1b63b35[m Addition of Round 1 files
+ file_dump/Phi-3-mini Experiments.docx      |  Bin [31m0[m -> [32m223727[m bytes
+ file_dump/phi3-sft-benchmarking.ipynb      |    1 [32m+[m
+ file_dump/phi3_base_gsm8k_analysis.csv     | 2086 [32m++++++++++++++++++++++++++++[m
+ file_dump/phi3_base_mmlu_results.csv       |   51 [32m+[m
+ file_dump/phi3_base_strategyqa_results.csv |   51 [32m+[m
+ file_dump/phi3_grpo_1.zip                  |  Bin [31m0[m -> [32m14066398[m bytes
+ file_dump/phi3_sft_lora.zip                |  Bin [31m0[m -> [32m12203971[m bytes
+ file_dump/phi_3_basemax.ipynb              |    1 [32m+[m
+ file_dump/phi_3_gsm8k_benchmarks.ipynb     |    1 [32m+[m
+ file_dump/phi_3_stratqa_mmlu.ipynb         |    1 [32m+[m
+ file_dump/phi_grpo_2.zip                   |  Bin [31m0[m -> [32m14066203[m bytes
+ 11 files changed, 2192 insertions(+)
+[33m69025f5[m Initial commit
+ README.md | 40 [32m++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 40 insertions(+)
