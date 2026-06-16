@@ -1,0 +1,161 @@
+{
+  "config": {
+    "BASE_MODEL": "microsoft/phi-3-mini-4k-instruct",
+    "SFT_PATH": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+    "N_GSM8K": 30,
+    "N_STRATEGYQA": 30,
+    "N_MMLU_PER_SUBJECT": 12,
+    "MMLU_SUBJECTS": [
+      "abstract_algebra",
+      "college_mathematics",
+      "logical_fallacies",
+      "formal_logic",
+      "high_school_mathematics"
+    ]
+  },
+  "meta": {
+    "n_samples": 120,
+    "n_layers": 33,
+    "hidden_size": 3072,
+    "tasks": [
+      "gsm8k",
+      "mmlu",
+      "strategyqa"
+    ],
+    "subjects": [
+      "abstract_algebra",
+      "college_mathematics",
+      "formal_logic",
+      "gsm8k",
+      "high_school_mathematics",
+      "logical_fallacies",
+      "strategyqa"
+    ],
+    "model_layers": 32,
+    "model_hidden": 3072
+  },
+  "task_summary": [
+    {
+      "task": "gsm8k",
+      "n_samples": 30,
+      "accuracy": 0.16666666666666666,
+      "mean_prompt_tokens": 69.43333333333334,
+      "mean_completion_tokens": 79.86666666666666,
+      "mean_target_margin": -10.045833333333333,
+      "mean_target_prob": 3.821989054131336e-05,
+      "mean_target_rank": 169.5
+    },
+    {
+      "task": "mmlu",
+      "n_samples": 60,
+      "accuracy": 0.31666666666666665,
+      "mean_prompt_tokens": 106.76666666666667,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -14.484375,
+      "mean_target_prob": 1.171692795987056e-06,
+      "mean_target_rank": 709.7666666666667
+    },
+    {
+      "task": "strategyqa",
+      "n_samples": 30,
+      "accuracy": 0.5,
+      "mean_prompt_tokens": 25.2,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -11.035416666666666,
+      "mean_target_prob": 3.4688299050837185e-05,
+      "mean_target_rank": 576.6333333333333
+    }
+  ],
+  "subject_summary": [
+    {
+      "subject": "abstract_algebra",
+      "n_samples": 12,
+      "accuracy": 0.5,
+      "mean_prompt_tokens": 91.33333333333333,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -15.994791666666666,
+      "mean_target_prob": 4.6767023305823347e-07,
+      "mean_target_rank": 804.6666666666666
+    },
+    {
+      "subject": "college_mathematics",
+      "n_samples": 12,
+      "accuracy": 0.25,
+      "mean_prompt_tokens": 107.0,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -14.328125,
+      "mean_target_prob": 1.5396267076065822e-06,
+      "mean_target_rank": 790.8333333333334
+    },
+    {
+      "subject": "formal_logic",
+      "n_samples": 12,
+      "accuracy": 0.16666666666666666,
+      "mean_prompt_tokens": 130.5,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -14.895833333333334,
+      "mean_target_prob": 7.398170953631933e-07,
+      "mean_target_rank": 756.4166666666666
+    },
+    {
+      "subject": "gsm8k",
+      "n_samples": 30,
+      "accuracy": 0.16666666666666666,
+      "mean_prompt_tokens": 69.43333333333334,
+      "mean_completion_tokens": 79.86666666666666,
+      "mean_target_margin": -10.045833333333333,
+      "mean_target_prob": 3.821989054131336e-05,
+      "mean_target_rank": 169.5
+    },
+    {
+      "subject": "high_school_mathematics",
+      "n_samples": 12,
+      "accuracy": 0.08333333333333333,
+      "mean_prompt_tokens": 104.25,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -14.294270833333334,
+      "mean_target_prob": 6.085780116886023e-07,
+      "mean_target_rank": 727.5
+    },
+    {
+      "subject": "logical_fallacies",
+      "n_samples": 12,
+      "accuracy": 0.5833333333333334,
+      "mean_prompt_tokens": 100.75,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -12.908854166666666,
+      "mean_target_prob": 2.502771932218669e-06,
+      "mean_target_rank": 469.4166666666667
+    },
+    {
+      "subject": "strategyqa",
+      "n_samples": 30,
+      "accuracy": 0.5,
+      "mean_prompt_tokens": 25.2,
+      "mean_completion_tokens": 81.0,
+      "mean_target_margin": -11.035416666666666,
+      "mean_target_prob": 3.4688299050837185e-05,
+      "mean_target_rank": 576.6333333333333
+    }
+  ],
+  "drift_summary": [
+    {
+      "task": "gsm8k",
+      "drift_cosine_mean": 0.8345998674631119,
+      "step_distance_mean": 35.27495729923248,
+      "explained_var1_mean": 0.27060700200362575
+    },
+    {
+      "task": "mmlu",
+      "drift_cosine_mean": 0.8391749495640397,
+      "step_distance_mean": 35.477276504039764,
+      "explained_var1_mean": 0.27784464720342816
+    },
+    {
+      "task": "strategyqa",
+      "drift_cosine_mean": 0.8323670579120517,
+      "step_distance_mean": 36.20832717418671,
+      "explained_var1_mean": 0.2750557178406605
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "n_samples": 120,
+  "n_layers": 33,
+  "hidden_size": 3072,
+  "tasks": [
+    "gsm8k",
+    "mmlu",
+    "strategyqa"
+  ],
+  "subjects": [
+    "abstract_algebra",
+    "college_mathematics",
+    "formal_logic",
+    "gsm8k",
+    "high_school_mathematics",
+    "logical_fallacies",
+    "strategyqa"
+  ],
+  "model_layers": 32,
+  "model_hidden": 3072
+}

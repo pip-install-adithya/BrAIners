@@ -1,0 +1,14 @@
+{
+  "n_questions": 120,
+  "n_variants": 7,
+  "baseline_variant": "plain",
+  "baseline_pass1_raw_accuracy": 0.45,
+  "baseline_pass2_raw_accuracy": 0.425,
+  "baseline_pass1_cal_accuracy": 0.5833333333333334,
+  "baseline_pass2_cal_accuracy": 0.5916666666666667,
+  "baseline_improvement_rate": 0.125,
+  "baseline_regression_rate": 0.15,
+  "baseline_transition_entropy": 1.8312822501647568,
+  "baseline_q_stability_mean": 0.6416666666666667,
+  "baseline_q_drift_mean": 0.30325097839165666
+}
