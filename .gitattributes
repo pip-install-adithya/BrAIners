@@ -1,1 +1,2 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
 advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/csv/sample_layerwise_features.csv filter=lfs diff=lfs merge=lfs -text
