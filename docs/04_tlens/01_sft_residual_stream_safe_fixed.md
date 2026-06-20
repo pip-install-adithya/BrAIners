@@ -36,23 +36,47 @@ The safe_fixed run is useful because it provides a low-risk, reproducible SFT ba
 
 ## Figures to embed
 
-- `../phi3_residual_stream_safe_fixed/plots/accuracy_comparison.png`
-- `../phi3_residual_stream_safe_fixed/plots/base/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/base/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/base/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/base/strategyqa_1_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/sft/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/sft/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/sft/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/sft/strategyqa_1_dashboard.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_0_comparison.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_0_sequence_dynamics.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_1_comparison.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_1_sequence_dynamics.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_0_comparison.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_0_sequence_dynamics.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_1_comparison.png`
-- `../phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_1_sequence_dynamics.png`
+## Phi-3 Residual Stream Layerwise Dynamics (Base vs. SFT)
+
+### Base Model Latent Dashboards
+
+| GSM8K Stream Dashboards | StrategyQA Stream Dashboards |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/base/gsm8k_0_dashboard.png" height="220" alt="GSM8K Sample 0 Base Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/base/strategyqa_0_dashboard.png" height="220" alt="StrategyQA Sample 0 Base Dashboard"> |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/base/gsm8k_1_dashboard.png" height="220" alt="GSM8K Sample 1 Base Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/base/strategyqa_1_dashboard.png" height="220" alt="StrategyQA Sample 1 Base Dashboard"> |
+
+---
+
+### SFT Model Latent Dashboards
+
+| GSM8K Stream Dashboards | StrategyQA Stream Dashboards |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/sft/gsm8k_0_dashboard.png" height="220" alt="GSM8K Sample 0 SFT Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/sft/strategyqa_0_dashboard.png" height="220" alt="StrategyQA Sample 0 SFT Dashboard"> |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/sft/gsm8k_1_dashboard.png" height="220" alt="GSM8K Sample 1 SFT Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/sft/strategyqa_1_dashboard.png" height="220" alt="StrategyQA Sample 1 SFT Dashboard"> |
+
+---
+
+### Layerwise Inter-Model Comparison & Sequence Dynamics
+
+#### GSM8K Sample 0 Direct Projections
+| Logit Attribution Comparison | Hidden State Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_0_comparison.png" height="220" alt="GSM8K Sample 0 Comparison"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_0_sequence_dynamics.png" height="220" alt="GSM8K Sample 0 Sequence Dynamics"> |
+
+#### GSM8K Sample 1 Direct Projections
+| Logit Attribution Comparison | Hidden State Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_1_comparison.png" height="220" alt="GSM8K Sample 1 Comparison"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/gsm8k_1_sequence_dynamics.png" height="220" alt="GSM8K Sample 1 Sequence Dynamics"> |
+
+#### StrategyQA Sample 0 Direct Projections
+| Logit Attribution Comparison | Hidden State Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_0_comparison.png" height="220" alt="StrategyQA Sample 0 Comparison"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_0_sequence_dynamics.png" height="220" alt="StrategyQA Sample 0 Sequence Dynamics"> |
+
+#### StrategyQA Sample 1 Direct Projections
+| Logit Attribution Comparison | Hidden State Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_1_comparison.png" height="220" alt="StrategyQA Sample 1 Comparison"> | <img src="../../src/t_lens/phi3_residual_stream_safe_fixed/phi3_residual_stream_safe_fixed/plots/comparison/strategyqa_1_sequence_dynamics.png" height="220" alt="StrategyQA Sample 1 Sequence Dynamics"> |
 
 ## Closing line
 

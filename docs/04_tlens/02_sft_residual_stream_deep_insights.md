@@ -40,25 +40,97 @@ The deep_insights archive should be used to justify the following claim:
 
 That claim is consistent with the earlier diagnostics and gives a direct mechanistic reason to keep the plain SFT model as the submission champion.
 
-## Figures to embed
+## Phi-3 Residual Stream Deep Insights Layerwise Dynamics
 
-- `../phi3_residual_stream_deep_insights/plots/accuracy_comparison.png`
-- `../phi3_residual_stream_deep_insights/plots/base/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/base/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/base/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/base/strategyqa_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/sft/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/sft/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/sft/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/sft/strategyqa_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/gsm8k_0_comparison.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/gsm8k_0_sequence_dynamics.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/gsm8k_1_comparison.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/gsm8k_1_sequence_dynamics.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/strategyqa_0_comparison.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/strategyqa_0_sequence_dynamics.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/strategyqa_1_comparison.png`
-- `../phi3_residual_stream_deep_insights/plots/comparison/strategyqa_1_sequence_dynamics.png`
+### Global Performance Profile
+
+| Accuracy Evolution Overview |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/accuracy_comparison.png" width="85%" alt="Accuracy Comparison"> |
+
+---
+
+### Base Model Latent Dashboards
+
+#### GSM8K Core Streams
+| Sample 0 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/base/gsm8k_0_dashboard.png" width="85%" alt="GSM8K Sample 0 Base Dashboard"> |
+
+| Sample 1 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/base/gsm8k_1_dashboard.png" width="85%" alt="GSM8K Sample 1 Base Dashboard"> |
+
+#### StrategyQA Core Streams
+| Sample 0 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/base/strategyqa_0_dashboard.png" width="85%" alt="StrategyQA Sample 0 Base Dashboard"> |
+
+| Sample 1 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/base/strategyqa_1_dashboard.png" width="85%" alt="StrategyQA Sample 1 Base Dashboard"> |
+
+---
+
+### SFT Model Latent Dashboards
+
+#### GSM8K Core Streams
+| Sample 0 SFT Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/sft/gsm8k_0_dashboard.png" width="85%" alt="GSM8K Sample 0 SFT Dashboard"> |
+
+| Sample 1 SFT Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/sft/gsm8k_1_dashboard.png" width="85%" alt="GSM8K Sample 1 SFT Dashboard"> |
+
+#### StrategyQA Core Streams
+| Sample 0 SFT Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/sft/strategyqa_0_dashboard.png" width="85%" alt="StrategyQA Sample 0 SFT Dashboard"> |
+
+| Sample 1 SFT Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/sft/strategyqa_1_dashboard.png" width="85%" alt="StrategyQA Sample 1 SFT Dashboard"> |
+
+---
+
+### Layerwise Inter-Model Comparison & Sequence Dynamics
+
+#### GSM8K Sample 0 Direct Projections
+| Logit Attribution Comparison |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/gsm8k_0_comparison.png" width="85%" alt="GSM8K Sample 0 Comparison"> |
+
+| Hidden State Sequence Dynamics |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/gsm8k_0_sequence_dynamics.png" width="85%" alt="GSM8K Sample 0 Sequence Dynamics"> |
+
+#### GSM8K Sample 1 Direct Projections
+| Logit Attribution Comparison |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/gsm8k_1_comparison.png" width="85%" alt="GSM8K Sample 1 Comparison"> |
+
+| Hidden State Sequence Dynamics |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/gsm8k_1_sequence_dynamics.png" width="85%" alt="GSM8K Sample 1 Sequence Dynamics"> |
+
+#### StrategyQA Sample 0 Direct Projections
+| Logit Attribution Comparison |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/strategyqa_0_comparison.png" width="85%" alt="StrategyQA Sample 0 Comparison"> |
+
+| Hidden State Sequence Dynamics |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/strategyqa_0_sequence_dynamics.png" width="85%" alt="StrategyQA Sample 0 Sequence Dynamics"> |
+
+#### StrategyQA Sample 1 Direct Projections
+| Logit Attribution Comparison |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/strategyqa_1_comparison.png" width="85%" alt="StrategyQA Sample 1 Comparison"> |
+
+| Hidden State Sequence Dynamics |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights/phi3_residual_stream_deep_insights/plots/comparison/strategyqa_1_sequence_dynamics.png" width="85%" alt="StrategyQA Sample 1 Sequence Dynamics"> |
 
 ## Closing line
 

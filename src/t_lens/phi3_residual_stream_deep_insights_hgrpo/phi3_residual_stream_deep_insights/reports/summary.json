@@ -1,0 +1,102 @@
+{
+  "base_model": "microsoft/phi-3-mini-4k-instruct",
+  "checkpoints_dir": "/kaggle/input/datasets/adithyal2/phi3-adapterss/hierarchical_steering_grpo_phi3/checkpoints",
+  "samples": [
+    "strategyqa_0",
+    "gsm8k_1",
+    "strategyqa_1",
+    "gsm8k_0"
+  ],
+  "progression_summary": [
+    {
+      "model": "base",
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.5,
+      "format_rate": 0.5,
+      "hedge_rate": 0.0,
+      "avg_len": 103.0
+    },
+    {
+      "model": "base",
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 1.0,
+      "format_rate": 1.0,
+      "hedge_rate": 0.0,
+      "avg_len": 1.0
+    },
+    {
+      "model": "checkpoint-150",
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.5,
+      "format_rate": 0.5,
+      "hedge_rate": 0.0,
+      "avg_len": 103.0
+    },
+    {
+      "model": "checkpoint-150",
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 1.0,
+      "format_rate": 1.0,
+      "hedge_rate": 0.0,
+      "avg_len": 1.0
+    },
+    {
+      "model": "checkpoint-200",
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.5,
+      "format_rate": 0.5,
+      "hedge_rate": 0.0,
+      "avg_len": 103.0
+    },
+    {
+      "model": "checkpoint-200",
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 1.0,
+      "format_rate": 1.0,
+      "hedge_rate": 0.0,
+      "avg_len": 1.0
+    },
+    {
+      "model": "checkpoint-250",
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.5,
+      "format_rate": 0.5,
+      "hedge_rate": 0.0,
+      "avg_len": 95.0
+    },
+    {
+      "model": "checkpoint-250",
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 1.0,
+      "format_rate": 1.0,
+      "hedge_rate": 0.0,
+      "avg_len": 1.0
+    },
+    {
+      "model": "final_model",
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.5,
+      "format_rate": 0.5,
+      "hedge_rate": 0.0,
+      "avg_len": 95.0
+    },
+    {
+      "model": "final_model",
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 1.0,
+      "format_rate": 1.0,
+      "hedge_rate": 0.0,
+      "avg_len": 1.0
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "base_model": "microsoft/phi-3-mini-4k-instruct",
+  "sft_source": "/kaggle/input/datasets/adithyaled24b039/phi3-sft-folderr/phi3_sft_lora",
+  "samples": [
+    "strategyqa_0",
+    "gsm8k_1",
+    "strategyqa_1",
+    "gsm8k_0"
+  ],
+  "base_summary": [
+    {
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.0,
+      "format_rate": 0.0,
+      "hedge_rate": 0.0,
+      "avg_len": 256.0
+    },
+    {
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 0.0,
+      "format_rate": 0.0,
+      "hedge_rate": 0.0,
+      "avg_len": 192.0
+    }
+  ],
+  "sft_summary": [
+    {
+      "task": "gsm8k",
+      "n": 2,
+      "accuracy": 0.0,
+      "format_rate": 0.0,
+      "hedge_rate": 0.0,
+      "avg_len": 256.0
+    },
+    {
+      "task": "strategyqa",
+      "n": 2,
+      "accuracy": 0.0,
+      "format_rate": 0.0,
+      "hedge_rate": 0.0,
+      "avg_len": 99.5
+    }
+  ],
+  "comparison": [
+    {
+      "task": "gsm8k",
+      "n_base": 2,
+      "accuracy_base": 0.0,
+      "format_rate_base": 0.0,
+      "hedge_rate_base": 0.0,
+      "avg_len_base": 256.0,
+      "n_sft": 2,
+      "accuracy_sft": 0.0,
+      "format_rate_sft": 0.0,
+      "hedge_rate_sft": 0.0,
+      "avg_len_sft": 256.0,
+      "delta_accuracy": 0.0,
+      "delta_format_rate": 0.0,
+      "delta_hedge_rate": 0.0
+    },
+    {
+      "task": "strategyqa",
+      "n_base": 2,
+      "accuracy_base": 0.0,
+      "format_rate_base": 0.0,
+      "hedge_rate_base": 0.0,
+      "avg_len_base": 192.0,
+      "n_sft": 2,
+      "accuracy_sft": 0.0,
+      "format_rate_sft": 0.0,
+      "hedge_rate_sft": 0.0,
+      "avg_len_sft": 99.5,
+      "delta_accuracy": 0.0,
+      "delta_format_rate": 0.0,
+      "delta_hedge_rate": 0.0
+    }
+  ]
+}

@@ -51,44 +51,155 @@ That is exactly why the project’s final story stays honest:
 - HGRPO is the training-trajectory proof that the model can be moved,
 - and RRPO hard-mining is the most promising next-step challenger.
 
-## Figures to embed
+## Phi-3 Multi-Checkpoint Residual Stream Dynamics (HGRPO)
 
-- `../phi3_residual_stream_deep_insights/plots/accuracy_progression.png`
+### Global Training Progression
 
-### Base dashboards
-- `../phi3_residual_stream_deep_insights/plots/base/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/base/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/base/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/base/strategyqa_1_dashboard.png`
+| Training Iteration vs. Task Accuracy Progression |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/accuracy_progression.png" width="85%" alt="Accuracy Progression Across Checkpoints"> |
 
-### Checkpoint-150 dashboards
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-150/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-150/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-150/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-150/strategyqa_1_dashboard.png`
+---
 
-### Checkpoint-200 dashboards
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-200/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-200/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-200/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-200/strategyqa_1_dashboard.png`
+### 1. Base Model Phase Dashboards
 
-### Checkpoint-250 dashboards
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-250/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-250/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-250/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/checkpoint-250/strategyqa_1_dashboard.png`
+#### GSM8K Latent Streams
+| Sample 0 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/base/gsm8k_0_dashboard.png" width="85%" alt="GSM8K Sample 0 Base Dashboard"> |
 
-### Final-model dashboards
-- `../phi3_residual_stream_deep_insights/plots/final_model/gsm8k_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/final_model/gsm8k_1_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/final_model/strategyqa_0_dashboard.png`
-- `../phi3_residual_stream_deep_insights/plots/final_model/strategyqa_1_dashboard.png`
+| Sample 1 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/base/gsm8k_1_dashboard.png" width="85%" alt="GSM8K Sample 1 Base Dashboard"> |
 
-### Comparison and sequence-dynamics folders
-For each sample id shown in the archive, keep the corresponding:
-- `*_comparison_*.png`
-- `*_sequence_dynamics_*.png`
+#### StrategyQA Latent Streams
+| Sample 0 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/base/strategyqa_0_dashboard.png" width="85%" alt="StrategyQA Sample 0 Base Dashboard"> |
+
+| Sample 1 Base Dashboard |
+| :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/base/strategyqa_1_dashboard.png" width="85%" alt="StrategyQA Sample 1 Base Dashboard"> |
+
+---
+
+### 2. Checkpoint-150 Mid-Training Dashboards & Layerwise Comparisons
+
+#### Internal Representation Dashboards
+| GSM8K Sample 0 Dashboard | StrategyQA Sample 0 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-150/gsm8k_0_dashboard.png" width="100%" alt="GSM8K Sample 0 Checkpoint 150 Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-150/strategyqa_0_dashboard.png" width="100%" alt="StrategyQA Sample 0 Checkpoint 150 Dashboard"> |
+
+| GSM8K Sample 1 Dashboard | StrategyQA Sample 1 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-150/gsm8k_1_dashboard.png" width="100%" alt="GSM8K Sample 1 Checkpoint 150 Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-150/strategyqa_1_dashboard.png" width="100%" alt="StrategyQA Sample 1 Checkpoint 150 Dashboard"> |
+
+#### Checkpoint-150 Attribution & Dynamics Projections
+| GSM8K Sample 0 Layerwise Comparison | GSM8K Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_comparison_checkpoint-150.png" width="100%" alt="GSM8K Sample 0 Comparison Checkpoint 150"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_sequence_dynamics_checkpoint-150.png" width="100%" alt="GSM8K Sample 0 Sequence Dynamics Checkpoint 150"> |
+
+| GSM8K Sample 1 Layerwise Comparison | GSM8K Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_comparison_checkpoint-150.png" width="100%" alt="GSM8K Sample 1 Comparison Checkpoint 150"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_sequence_dynamics_checkpoint-150.png" width="100%" alt="GSM8K Sample 1 Sequence Dynamics Checkpoint 150"> |
+
+| StrategyQA Sample 0 Layerwise Comparison | StrategyQA Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_comparison_checkpoint-150.png" width="100%" alt="StrategyQA Sample 0 Comparison Checkpoint 150"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_sequence_dynamics_checkpoint-150.png" width="100%" alt="StrategyQA Sample 0 Sequence Dynamics Checkpoint 150"> |
+
+| StrategyQA Sample 1 Layerwise Comparison | StrategyQA Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_comparison_checkpoint-150.png" width="100%" alt="StrategyQA Sample 1 Comparison Checkpoint 150"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_sequence_dynamics_checkpoint-150.png" width="100%" alt="StrategyQA Sample 1 Sequence Dynamics Checkpoint 150"> |
+
+---
+
+### 3. Checkpoint-200 Mid-Training Dashboards & Layerwise Comparisons
+
+#### Internal Representation Dashboards
+| GSM8K Sample 0 Dashboard | StrategyQA Sample 0 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-200/gsm8k_0_dashboard.png" width="100%" alt="GSM8K Sample 0 Checkpoint 200 Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-200/strategyqa_0_dashboard.png" width="100%" alt="StrategyQA Sample 0 Checkpoint 200 Dashboard"> |
+
+| GSM8K Sample 1 Dashboard | StrategyQA Sample 1 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-200/gsm8k_1_dashboard.png" width="100%" alt="GSM8K Sample 1 Checkpoint 200 Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-200/strategyqa_1_dashboard.png" width="100%" alt="StrategyQA Sample 1 Checkpoint 200 Dashboard"> |
+
+#### Checkpoint-200 Attribution & Dynamics Projections
+| GSM8K Sample 0 Layerwise Comparison | GSM8K Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_comparison_checkpoint-200.png" width="100%" alt="GSM8K Sample 0 Comparison Checkpoint 200"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_sequence_dynamics_checkpoint-200.png" width="100%" alt="GSM8K Sample 0 Sequence Dynamics Checkpoint 200"> |
+
+| GSM8K Sample 1 Layerwise Comparison | GSM8K Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_comparison_checkpoint-200.png" width="100%" alt="GSM8K Sample 1 Comparison Checkpoint 200"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_sequence_dynamics_checkpoint-200.png" width="100%" alt="GSM8K Sample 1 Sequence Dynamics Checkpoint 200"> |
+
+| StrategyQA Sample 0 Layerwise Comparison | StrategyQA Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_comparison_checkpoint-200.png" width="100%" alt="StrategyQA Sample 0 Comparison Checkpoint 200"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_sequence_dynamics_checkpoint-200.png" width="100%" alt="StrategyQA Sample 0 Sequence Dynamics Checkpoint 200"> |
+
+| StrategyQA Sample 1 Layerwise Comparison | StrategyQA Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_comparison_checkpoint-200.png" width="100%" alt="StrategyQA Sample 1 Comparison Checkpoint 200"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_sequence_dynamics_checkpoint-200.png" width="100%" alt="StrategyQA Sample 1 Sequence Dynamics Checkpoint 200"> |
+
+---
+
+### 4. Checkpoint-250 Mid-Training Dashboards & Layerwise Comparisons
+
+#### Internal Representation Dashboards
+| GSM8K Sample 0 Dashboard | StrategyQA Sample 0 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-250/gsm8k_0_dashboard.png" width="100%" alt="GSM8K Sample 0 Checkpoint 250 Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-250/strategyqa_0_dashboard.png" width="100%" alt="StrategyQA Sample 0 Checkpoint 250 Dashboard"> |
+
+| GSM8K Sample 1 Dashboard | StrategyQA Sample 1 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-250/gsm8k_1_dashboard.png" width="100%" alt="GSM8K Sample 1 Checkpoint 250 Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/checkpoint-250/strategyqa_1_dashboard.png" width="100%" alt="StrategyQA Sample 1 Checkpoint 250 Dashboard"> |
+
+#### Checkpoint-250 Attribution & Dynamics Projections
+| GSM8K Sample 0 Layerwise Comparison | GSM8K Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_comparison_checkpoint-250.png" width="100%" alt="GSM8K Sample 0 Comparison Checkpoint 250"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_sequence_dynamics_checkpoint-250.png" width="100%" alt="GSM8K Sample 0 Sequence Dynamics Checkpoint 250"> |
+
+| GSM8K Sample 1 Layerwise Comparison | GSM8K Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_comparison_checkpoint-250.png" width="100%" alt="GSM8K Sample 1 Comparison Checkpoint 250"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_sequence_dynamics_checkpoint-250.png" width="100%" alt="GSM8K Sample 1 Sequence Dynamics Checkpoint 250"> |
+
+| StrategyQA Sample 0 Layerwise Comparison | StrategyQA Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_comparison_checkpoint-250.png" width="100%" alt="StrategyQA Sample 0 Comparison Checkpoint 250"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_sequence_dynamics_checkpoint-250.png" width="100%" alt="StrategyQA Sample 0 Sequence Dynamics Checkpoint 250"> |
+
+| StrategyQA Sample 1 Layerwise Comparison | StrategyQA Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_comparison_checkpoint-250.png" width="100%" alt="StrategyQA Sample 1 Comparison Checkpoint 250"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_sequence_dynamics_checkpoint-250.png" width="100%" alt="StrategyQA Sample 1 Sequence Dynamics Checkpoint 250"> |
+
+---
+
+### 5. Final Convergence Model Dashboards & Layerwise Comparisons
+
+#### Internal Representation Dashboards
+| GSM8K Sample 0 Dashboard | StrategyQA Sample 0 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/final_model/gsm8k_0_dashboard.png" width="100%" alt="GSM8K Sample 0 Final Model Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/final_model/strategyqa_0_dashboard.png" width="100%" alt="StrategyQA Sample 0 Final Model Dashboard"> |
+
+| GSM8K Sample 1 Dashboard | StrategyQA Sample 1 Dashboard |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/final_model/gsm8k_1_dashboard.png" width="100%" alt="GSM8K Sample 1 Final Model Dashboard"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/final_model/strategyqa_1_dashboard.png" width="100%" alt="StrategyQA Sample 1 Final Model Dashboard"> |
+
+#### Final Converged Attribution & Dynamics Projections
+| GSM8K Sample 0 Layerwise Comparison | GSM8K Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_comparison_final_model.png" width="100%" alt="GSM8K Sample 0 Comparison Final Model"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_0_sequence_dynamics_final_model.png" width="100%" alt="GSM8K Sample 0 Sequence Dynamics Final Model"> |
+
+| GSM8K Sample 1 Layerwise Comparison | GSM8K Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_comparison_final_model.png" width="100%" alt="GSM8K Sample 1 Comparison Final Model"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/gsm8k_1_sequence_dynamics_final_model.png" width="100%" alt="GSM8K Sample 1 Sequence Dynamics Final Model"> |
+
+| StrategyQA Sample 0 Layerwise Comparison | StrategyQA Sample 0 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_comparison_final_model.png" width="100%" alt="StrategyQA Sample 0 Comparison Final Model"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_0_sequence_dynamics_final_model.png" width="100%" alt="StrategyQA Sample 0 Sequence Dynamics Final Model"> |
+
+| StrategyQA Sample 1 Layerwise Comparison | StrategyQA Sample 1 Sequence Dynamics |
+| :---: | :---: |
+| <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_comparison_final_model.png" width="100%" alt="StrategyQA Sample 1 Comparison Final Model"> | <img src="../../src/t_lens/phi3_residual_stream_deep_insights_hgrpo/phi3_residual_stream_deep_insights/plots/comparisons/strategyqa_1_sequence_dynamics_final_model.png" width="100%" alt="StrategyQA Sample 1 Sequence Dynamics Final Model"> |
 
 The sample IDs visible in the TLens archive are:
 - `gsm8k_0`
