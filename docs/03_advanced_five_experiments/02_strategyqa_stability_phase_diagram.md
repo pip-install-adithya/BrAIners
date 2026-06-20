@@ -42,23 +42,44 @@ This experiment directly supports:
 It also explains why StrategyQA is not just a “knowledge benchmark.”  
 It is a decision-process benchmark.
 
-## Figures to embed
+## Phi-3 StrategyQA Stability Phase Diagram Experiment Results
 
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/overall_variant_dashboard.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/phase_portrait_baseline.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/phase_space_3d_trajectories.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/transition_heatmap_baseline.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/transition_entropy_hist.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/question_stability_scores.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/stability_vs_pass2_accuracy.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/reliability_pass1_baseline.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/reliability_pass2_baseline.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/pass1_logodds_hist.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/pass2_logodds_hist.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/bifurcation_hexbin_all_variants.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/variant_logodds_ridgeplot.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/variant_metric_map.png`
-- `../advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/variant_radar_fingerprint.png`
+### Latent Space Dynamics and State Trajectories
+
+| Phase Space Portraits | Attractors & Transitions |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/phase_portrait_baseline.png" height="250" alt="Phase Portrait Baseline"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/transition_heatmap_baseline.png" height="250" alt="Transition Heatmap Baseline"> |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/phase_space_3d_trajectories.png" height="250" alt="Phase Space 3D Trajectories"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/transition_entropy_hist.png" height="250" alt="Transition Entropy Histogram"> |
+
+---
+
+### Stability & Accuracy Breakdown
+
+| Stability Distributions | Calibration & Diagnostics |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/question_stability_scores.png" height="220" alt="Question Stability Scores"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/reliability_pass1_baseline.png" height="220" alt="Reliability Pass 1 Baseline"> |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/stability_vs_pass2_accuracy.png" height="220" alt="Stability vs Pass 2 Accuracy"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/reliability_pass2_baseline.png" height="220" alt="Reliability Pass 2 Baseline"> |
+
+---
+
+### Log-Odds Distributions and Bifurcations
+
+| Sequential Distributions | Global Bifurcation Maps |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/pass1_logodds_hist.png" height="220" alt="Pass 1 Log-Odds Histogram"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/bifurcation_hexbin_all_variants.png" height="220" alt="Bifurcation Hexbin All Variants"> |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/pass2_logodds_hist.png" height="220" alt="Pass 2 Log-Odds Histogram"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/variant_logodds_ridgeplot.png" height="220" alt="Variant Log-Odds Ridgeplot"> |
+
+---
+
+### Multi-Variant Fingerprints and Dashboards
+
+| Cross-Metric Heatmaps | Radar Fingerprints |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/variant_metric_map.png" height="220" alt="Variant Metric Map"> | <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/variant_radar_fingerprint.png" height="220" alt="Variant Radar Fingerprint"> |
+
+| Comprehensive Experiment Overview |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_stability_phase_diagram/strategyqa_stability_phase_diagram/plots/overall_variant_dashboard.png" width="85%" alt="Overall Variant Dashboard"> |
 
 ## Conclusion
 

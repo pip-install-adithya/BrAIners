@@ -45,21 +45,55 @@ That is why the project later separates:
 - answer-format rewards,
 - and routing rewards.
 
-## Figures to embed
+## Phi-3 Counterfactual Prompt Surgery Experiment Results
 
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/overall_variant_radar.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_phase_vector_field.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_content_dla_heatmap.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_dla_surface_3d.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_dla_dendrogram.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_phase_vector_field.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_content_dla_heatmap.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_dla_surface_3d.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_dla_dendrogram.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_phase_vector_field.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_content_dla_heatmap.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_dla_surface_3d.png`
-- `../advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_dla_dendrogram.png`
+### GSM8K Prompt Surgery Analysis
+
+#### System Dynamics and Latent Structures
+| Phase Vector Field | Clustering Dendrogram |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_phase_vector_field.png" height="250" alt="GSM8K Phase Vector Field"> | <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_dla_dendrogram.png" height="250" alt="GSM8K DLA Dendrogram"> |
+
+#### Layerwise Direct Logit Attribution (DLA)
+| Top Topography 3D | Attribution Delta Heatmap |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_dla_surface_3d.png" height="280" alt="GSM8K DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/gsm8k_content_dla_heatmap.png" height="280" alt="GSM8K Content DLA Heatmap"> |
+
+---
+
+### StrategyQA Prompt Surgery Analysis
+
+#### System Dynamics and Latent Structures
+| Phase Vector Field | Clustering Dendrogram |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_phase_vector_field.png" height="250" alt="StrategyQA Phase Vector Field"> | <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_dla_dendrogram.png" height="250" alt="StrategyQA DLA Dendrogram"> |
+
+#### Layerwise Direct Logit Attribution (DLA)
+| Top Topography 3D | Attribution Delta Heatmap |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_dla_surface_3d.png" height="280" alt="StrategyQA DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/strategyqa_content_dla_heatmap.png" height="280" alt="StrategyQA Content DLA Heatmap"> |
+
+---
+
+### MMLU Prompt Surgery Analysis
+
+#### System Dynamics and Latent Structures
+| Phase Vector Field | Clustering Dendrogram |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_phase_vector_field.png" height="250" alt="MMLU Phase Vector Field"> | <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_dla_dendrogram.png" height="250" alt="MMLU DLA Dendrogram"> |
+
+#### Layerwise Direct Logit Attribution (DLA)
+| Top Topography 3D | Attribution Delta Heatmap |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_dla_surface_3d.png" height="280" alt="MMLU DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/mmlu_content_dla_heatmap.png" height="280" alt="MMLU Content DLA Heatmap"> |
+
+---
+
+### Overall Variant Performance Atlas
+
+| Comprehensive Model Variant Fingerprints |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_counterfactual_prompt_surgery/phi3_prompt_surgery_atlas/plots/overall_variant_radar.png" width="70%" alt="Overall Variant Radar"> |
 
 ## Conclusion
 

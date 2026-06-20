@@ -1,3 +1,0 @@
-variant,raw_accuracy,calibrated_accuracy,explicit_answer_rate,hedged_rate,mean_commitment_score,mean_log_odds,threshold,validation_accuracy
-plain,0.185,0.51,0.26,0.0,0.571,-1.364594468785956,-1.50641473596813,0.59
-anchored,0.13,0.55,0.215,0.0,0.5579999999999999,-2.0670920935886277,-1.6676714040472513,0.595

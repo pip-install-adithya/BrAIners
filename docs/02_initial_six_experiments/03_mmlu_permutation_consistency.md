@@ -54,22 +54,37 @@ This is why later stages introduced:
 - answer extraction discipline,
 - and permutation-aware analysis.
 
-## Figures to embed
+## Phi-3 MMLU Permutation Consistency Experiment Results
 
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/raw_letter_distribution.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/positional_bias_heatmap.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/original_accuracy_by_prompt_variant.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/permuted_accuracy_by_prompt_variant.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/consistency_histogram.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/consistency_score_by_prompt_variant.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/content_stability_by_prompt_variant.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/consistency_vs_accuracy_hexbin.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_original_accuracy.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_permuted_accuracy.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_consistency_score.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_content_stability.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_raw_bias_fraction.png`
-- `../experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/radar_chart_anchored.png`
+### Global Metrics and Prompt Variant Analysis
+
+| Accuracy & Bias | Consistency & Stability Analysis |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/original_accuracy_by_prompt_variant.png" height="220" alt="Original Accuracy by Prompt Variant"> | <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/consistency_histogram.png" height="220" alt="Consistency Histogram"> |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/permuted_accuracy_by_prompt_variant.png" height="220" alt="Permuted Accuracy by Prompt Variant"> | <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/consistency_score_by_prompt_variant.png" height="220" alt="Consistency Score by Prompt Variant"> |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/raw_letter_distribution.png" height="220" alt="Raw Letter Distribution"> | <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/content_stability_by_prompt_variant.png" height="220" alt="Content Stability by Prompt Variant"> |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/positional_bias_heatmap.png" height="220" alt="Positional Bias Heatmap"> | <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/consistency_vs_accuracy_hexbin.png" height="220" alt="Consistency vs Accuracy Hexbin"> |
+
+---
+
+### Subject Evaluation Breakdowns
+
+| | |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_original_accuracy.png" height="220" alt="Subject Original Accuracy"> | <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_permuted_accuracy.png" height="220" alt="Subject Permuted Accuracy"> |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_consistency_score.png" height="220" alt="Subject Consistency Score"> | <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_content_stability.png" height="220" alt="Subject Content Stability"> |
+
+| Subject Raw Bias Fraction |
+| :---: |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/subject_raw_bias_fraction.png" height="220" alt="Subject Raw Bias Fraction"> |
+
+---
+
+### Anchored Radar Comparison
+
+| Radar Fingerprint |
+| :---: |
+| <img src="../../src/experiments/phi3_mmlu_permutation_consistency/phi3_mmlu_permutation_consistency/plots/radar_chart_anchored.png" height="220" alt="Radar Chart Anchored"> |
 
 ## Conclusion
 

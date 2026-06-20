@@ -1,4 +1,0 @@
-name,prefix_hash,prefix_hash3,reasoning,answer_first,question_first,compact,roomy,spacious,strength,note
-plain,0,0,0,0,1,1,0,0,0.0,minimal baseline
-anchored,1,0,0,0,1,1,0,0,0.15,anchored header
-anchored_reason,1,0,1,0,1,0,1,0,0.4,anchored + reasoning

@@ -55,21 +55,42 @@ This strongly supports:
 
 It also explains why the same training recipe can help one task and leave another unchanged.
 
-## Figures to embed
+## Phi-3 MMLU Task Inference & Gradient Conflict Results
 
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_accuracy.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_loss.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_loss_hist.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/grad_norm_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/gradient_cosine_gsm8k_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/gradient_dot_gsm8k_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/gradient_cosine_strategyqa_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/gradient_dot_strategyqa_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_cka_gsm8k_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_cka_strategyqa_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_overlap_gsm8k_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_overlap_strategyqa_vs_mmlu.png`
-- `../experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_delimiter_vs_plain_accuracy.png`
+### Task Interference: GSM8K vs. MMLU
+
+| Optimization & Layerwise Interferences |
+| :---: |
+| **Gradient Interaction** |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/gradient_dot_gsm8k_vs_mmlu.png" height="220" alt="Gradient Dot GSM8K vs MMLU"> |
+| **Representation Similarity** |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_cka_gsm8k_vs_mmlu.png" height="220" alt="Representation CKA GSM8K vs MMLU"> |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_overlap_gsm8k_vs_mmlu.png" height="220" alt="Representation Overlap GSM8K vs MMLU"> |
+
+---
+
+### Task Interference: StrategyQA vs. MMLU
+
+| Optimization & Layerwise Interferences |
+| :---: |
+| **Gradient Interaction** |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/gradient_dot_strategyqa_vs_mmlu.png" height="220" alt="Gradient Dot StrategyQA vs MMLU"> |
+| **Representation Similarity** |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_cka_strategyqa_vs_mmlu.png" height="220" alt="Representation CKA StrategyQA vs MMLU"> |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/rep_overlap_strategyqa_vs_mmlu.png" height="220" alt="Representation Overlap StrategyQA vs MMLU"> |
+
+---
+
+### MMLU Baseline Loss and Accuracy Evaluation
+
+| Performance Metrics | Optimization Diagnostics |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_accuracy.png" height="220" alt="MMLU Accuracy"> | <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_loss.png" height="220" alt="MMLU Loss"> |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_delimiter_vs_plain_accuracy.png" height="220" alt="MMLU Delimiter vs Plain Accuracy"> | <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/mmlu_loss_hist.png" height="220" alt="MMLU Loss Histogram"> |
+
+| Gradient Layer Trends |
+| :---: |
+| <img src="../../src/experiments/phi3_task_inference_gradient_conflict/phi3_task_interference/plots/grad_norm_mmlu.png" height="220" alt="Gradient Norm MMLU"> |
 
 ## Conclusion
 

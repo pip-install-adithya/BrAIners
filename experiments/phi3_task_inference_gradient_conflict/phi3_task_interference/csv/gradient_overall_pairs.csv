@@ -1,4 +1,0 @@
-task_a,task_b,cosine,dot,norm_a,norm_b,conflict
-gsm8k,strategyqa,,0.0,5.58760657440871e-05,0.0,False
-gsm8k,mmlu,,0.0,5.58760657440871e-05,0.0,False
-strategyqa,mmlu,,0.0,0.0,0.0,False

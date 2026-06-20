@@ -49,25 +49,48 @@ This is one of the strongest justifications for answer-order-aware reward shapin
 
 ## Figures to embed
 
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/style_summary_dashboard.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/raw_letter_distribution.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/canonical_letter_distribution.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/positional_bias_heatmap.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/confusion_matrix_heatmap.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/consistency_histogram.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/stability_vs_accuracy_scatter.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/consistency_vs_accuracy_hexbin.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/question_permutation_entropy_hist.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/question_stability_scores.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_metric_heatmap.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_ridgeline.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_original_accuracy.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_permuted_accuracy.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_consistency_score.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_content_stability.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_raw_bias_fraction.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/entropy_vs_invariance_hexbin.png`
-- `../advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/radar_chart_anchored.png`
+## Phi-3 MMLU Permutation Lattice Experiment Results
+
+### Matrix Analytics & Subject Heatmaps
+
+| Style Metrics | Subject Distributions |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/style_metric_heatmap.png" height="220" alt="Style Metric Heatmap"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_metric_heatmap.png" height="220" alt="Subject Metric Heatmap"> |
+| | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/subject_ridgeline.png" height="220" alt="Subject Ridgeline"> |
+
+---
+
+### Permutation Invariance & Information Entropy
+
+| Consistency Metrics | Metric State Space Overlaps |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/question_permutation_entropy_hist.png" height="220" alt="Question Permutation Entropy Histogram"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/stability_vs_accuracy_scatter.png" height="220" alt="Stability vs Accuracy Scatter"> |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/question_stability_scores.png" height="220" alt="Question Stability Scores"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/entropy_vs_invariance_hexbin.png" height="220" alt="Entropy vs Invariance Hexbin"> |
+
+---
+
+### Subject-Wise Specific Lattice Dimensions
+
+#### Mathematics and Algebra Domains
+| Topography 3D Surface | Hierarchical Clustering |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/abstract_algebra_dla_surface_3d.png" height="220" alt="Abstract Algebra DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/abstract_algebra_dla_dendrogram.png" height="220" alt="Abstract Algebra DLA Dendrogram"> |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/college_mathematics_dla_surface_3d.png" height="220" alt="College Mathematics DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/college_mathematics_dla_dendrogram.png" height="220" alt="College Mathematics DLA Dendrogram"> |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/high_school_mathematics_dla_surface_3d.png" height="220" alt="High School Mathematics DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/high_school_mathematics_dla_dendrogram.png" height="220" alt="High School Mathematics DLA Dendrogram"> |
+
+#### Logic and Reason Fallacies
+| Topography 3D Surface | Hierarchical Clustering |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/formal_logic_dla_surface_3d.png" height="220" alt="Formal Logic DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/formal_logic_dla_dendrogram.png" height="220" alt="Formal Logic DLA Dendrogram"> |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/logical_fallacies_dla_surface_3d.png" height="220" alt="Logical Fallacies DLA Surface 3D"> | <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/logical_fallacies_dla_dendrogram.png" height="220" alt="Logical Fallacies DLA Dendrogram"> |
+
+---
+
+### Comprehensive Style Summary Dashboard
+
+| Overview Control Dashboard |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_mmlu_permutation_lattice/mmlu_permutation_lattice_atlas/plots/style_summary_dashboard.png" width="85%" alt="Style Summary Dashboard"> |
 
 ## Conclusion
 

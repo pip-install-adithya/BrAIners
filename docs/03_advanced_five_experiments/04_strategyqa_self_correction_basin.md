@@ -60,35 +60,30 @@ That directly motivates:
 
 ## Figures to embed
 
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/overall_dashboard.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/variant_metrics_dashboard.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/variant_metric_heatmap.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/basin_atlas_baseline.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/basin_atlas_all_variants.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/basin_class_counts.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/phase_portrait_baseline.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/trajectory_field_baseline.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/trajectory_field_all_variants.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/transition_heatmap_baseline.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/strip_transitions_baseline.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/strip_transitions_all_variants.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/reliability_plain_pass1.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/reliability_plain_pass2.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/reliability_anchored_reason_pass1.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/reliability_anchored_reason_pass2.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/question_stability_scores.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/question_transition_entropy_hist.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/question_response_drift_hist.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/response_drift_baseline.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/response_drift_all_variants.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/entropy_vs_improvement.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/drift_vs_delta_logodds.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/stability_vs_pass2_accuracy.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/self_correction_waterfall.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/glyph_atlas_all.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/representative_trajectories_all.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/bifurcation_all_variants.png`
-- `../advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/accuracy_comparison_grouped.png`
+## Phi-3 StrategyQA Self-Correction Basin Atlas Experiment Results
+
+### Basin Atlas & Latent State Dynamics
+
+#### Comprehensive Phase Space & Attractor Atlases
+
+| Baseline Geometry Basin Atlas |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/basin_atlas_baseline.png" width="85%" alt="Basin Atlas Baseline"> |
+
+| All Variants Comparison Basin Atlas |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/basin_atlas_all_variants.png" width="85%" alt="Basin Atlas All Variants"> |
+
+#### Trajectory Fields & High-Dimensional State Vectors
+
+| Baseline Trajectory Tracking | Multi-Variant Dynamics Trajectory Field |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/trajectory_field_baseline.png" height="220" alt="Trajectory Field Baseline"> | <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/trajectory_field_all_variants.png" height="220" alt="Trajectory Field All Variants"> |
+| <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/phase_portrait_baseline.png" height="220" alt="Phase Portrait Baseline"> | <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/basin_class_counts.png" height="220" alt="Basin Class Counts"> |
+
+| Representative Path Trajectories (All Variants Overview) |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_stratqa_self_correction_basin_atlas/strategyqa_self_correction_basin_atlas/plots/representative_trajectories_all.png" width="85%" alt="Representative Trajectories All"> |
 
 ## Conclusion
 

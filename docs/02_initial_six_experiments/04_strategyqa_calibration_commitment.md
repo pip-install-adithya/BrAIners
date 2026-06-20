@@ -38,29 +38,45 @@ This is also why later training and evaluation used:
 The anchored prompt improves calibrated behavior, but the effect is not identical to raw accuracy.  
 That distinction matters: the model can be more usable even if the raw string is still noisy.
 
-## Figures to embed
 
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/accuracy_bar_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/accuracy_bar_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_bar_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_bar_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_hist_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_hist_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/completion_length_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/completion_length_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_hist_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_hist_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_violin_by_class_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_violin_by_class_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_vs_commitment_hexbin_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_vs_commitment_hexbin_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/reliability_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/reliability_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/threshold_search_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/threshold_search_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/metric_correlations_plain.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/metric_correlations_anchored.png`
-- `../experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/variant_performance_radar.png`
+## Phi-3 StrategyQA Calibration and Commitment Experiment Results
+
+### Log-Odds and Distribution Analysis
+
+| Plain Setup | Anchored Setup |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_hist_plain.png" height="220" alt="Log-Odds Histogram Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_hist_anchored.png" height="220" alt="Log-Odds Histogram Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_violin_by_class_plain.png" height="220" alt="Log-Odds Violin by Class Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_violin_by_class_anchored.png" height="220" alt="Log-Odds Violin by Class Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_vs_commitment_hexbin_plain.png" height="220" alt="Log-Odds vs Commitment Hexbin Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/logodds_vs_commitment_hexbin_anchored.png" height="220" alt="Log-Odds vs Commitment Hexbin Anchored"> |
+
+---
+
+### Reliability, Calibration Tuning, and Metrics
+
+| Plain Setup | Anchored Setup |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/reliability_plain.png" height="220" alt="Reliability Curve Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/reliability_anchored.png" height="220" alt="Reliability Curve Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/threshold_search_plain.png" height="220" alt="Threshold Search Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/threshold_search_anchored.png" height="220" alt="Threshold Search Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/metric_correlations_plain.png" height="220" alt="Metric Correlations Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/metric_correlations_anchored.png" height="220" alt="Metric Correlations Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_hist_plain.png" height="220" alt="Commitment Histogram Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_hist_anchored.png" height="220" alt="Commitment Histogram Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/completion_length_plain.png" height="220" alt="Completion Length Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/completion_length_anchored.png" height="220" alt="Completion Length Anchored"> |
+
+---
+
+### Performance and Commitment Summary
+
+| Plain Setup | Anchored Setup |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/accuracy_bar_plain.png" height="220" alt="Accuracy Bar Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/accuracy_bar_anchored.png" height="220" alt="Accuracy Bar Anchored"> |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_bar_plain.png" height="220" alt="Commitment Bar Plain"> | <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/commitment_bar_anchored.png" height="220" alt="Commitment Bar Anchored"> |
+
+---
+
+### Variant Performance Fingerprint
+
+| Overall Variant Performance |
+| :---: |
+| <img src="../../src/experiments/phi3_stratqa_calibration_commitment/phi3_strategyqa_calibration/plots/variant_performance_radar.png" height="220" alt="Variant Performance Radar"> |
 
 ## Conclusion
 

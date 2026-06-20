@@ -1,3 +1,0 @@
-mode,n,clean_accuracy,corrupt_accuracy,clean_gold_logprob_mean,corrupt_gold_logprob_mean,delta_gold_logprob_mean,delta_target_logit_mean,avg_clean_prompt_len,avg_corrupt_prompt_len
-anchored,40,0.125,0.15,-1.4493186324834824,-1.4458463549613954,-0.0034722775220870973,0.02265625,196.45,196.7
-plain,40,0.15,0.15,-1.804763239622116,-1.7962473243474961,-0.008515915274620056,-0.03828125,192.45,192.7

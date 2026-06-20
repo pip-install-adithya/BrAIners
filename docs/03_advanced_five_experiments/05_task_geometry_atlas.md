@@ -48,27 +48,82 @@ This is a central justification for:
 - task routing,
 - and diagnostic-routed reward design.
 
-## Figures to embed
+## Phi-3 Task Geometry Atlas Experiment Results
 
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_geometry_atlas_dashboard.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/layerwise_geometry_summary.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/accuracy_and_margin_dashboard.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_centroid_trajectories.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_centroid_trajectory_pca.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_manifold_3d_final.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_manifold_final_layer.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/final_layer_embedding_cloud.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/final_layer_similarity_ridges.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/final_centroid_separation_heatmap.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/cka_layers_dashboard.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/cka_pairwise_layer_heatmap.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/subspace_overlap_ribbon.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/pairwise_centroid_distance_dashboard.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/principal_direction_drift_dashboard.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/sample_feature_correlation.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_taxonomy_dendrogram.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/violin_target_margin.png`
-- `../advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/violin_target_prob.png`
+### High-Dimensional Manifolds & Trajectory Dynamics
+
+#### Latent Representation Landscapes
+| Geometric Task Manifold (3D Final Projection) |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_manifold_3d_final.png" width="85%" alt="Task Manifold 3D Final"> |
+
+#### Hidden Layer Evolution Streams
+| Layerwise Task Centroid Trajectories |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_centroid_trajectories.png" width="85%" alt="Task Centroid Trajectories"> |
+
+| Principal Component Projections | Final Processing Layer State |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_centroid_trajectory_pca.png" height="220" alt="Task Centroid Trajectory PCA"> | <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_manifold_final_layer.png" height="220" alt="Task Manifold Final Layer"> |
+
+---
+
+### Layerwise Representation & Centroid Separation
+
+#### Metric Extraction Landscapes
+| Centroid Spatial Distance Dashboard |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/pairwise_centroid_distance_dashboard.png" width="85%" alt="Pairwise Centroid Distance Dashboard"> |
+
+| Convergent Discrepancy Heatmaps | Target Subspace Topography |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/final_centroid_separation_heatmap.png" height="220" alt="Final Centroid Separation Heatmap"> | <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/final_layer_similarity_ridges.png" height="220" alt="Final Layer Similarity Ridges"> |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/subspace_overlap_ribbon.png" height="220" alt="Subspace Overlap Ribbon"> | <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_taxonomy_dendrogram.png" height="220" alt="Task Taxonomy Dendrogram"> |
+
+#### High-Density Activation Clouds
+| Final Layer Token Embedding Point Cloud |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/final_layer_embedding_cloud.png" width="85%" alt="Final Layer Embedding Cloud"> |
+
+---
+
+### Similarity, Representation Alignment & Drift
+
+#### Multi-Layer Representation Tracking
+| Canonical Correlation Analysis (CKA) Dashboard |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/cka_layers_dashboard.png" width="85%" alt="CKA Layers Dashboard"> |
+
+| Principal Vector Drift Dashboard |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/principal_direction_drift_dashboard.png" width="85%" alt="Principal Direction Drift Dashboard"> |
+
+| Internal Alignment Matrices | Cross-Layer Feature Correlations |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/cka_pairwise_layer_heatmap.png" height="220" alt="CKA Pairwise Layer Heatmap"> | <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/sample_feature_correlation.png" height="220" alt="Sample Feature Correlation"> |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/layerwise_geometry_summary.png" height="220" alt="Layerwise Geometry Summary"> | |
+
+---
+
+### Target Probabilities & Certainty Margins
+
+#### Margin Calibration Diagnostics
+| Evaluation Accuracy & Prediction Margin Dashboard |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/accuracy_and_margin_dashboard.png" width="85%" alt="Accuracy and Margin Dashboard"> |
+
+| Certainty Index Densities | Target Logit Proximity |
+| :---: | :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/violin_target_prob.png" height="220" alt="Violin Target Probabilities"> | <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/violin_target_margin.png" height="220" alt="Violin Target Margin"> |
+
+---
+
+### Global Geometry Control Panel
+
+#### Comprehensive Atlas Summary
+| Overall Task Geometry Control Dashboard |
+| :---: |
+| <img src="../../src/advanced_experiments/phi3_task_geometry_atlas/task_geometry_atlas/plots/task_geometry_atlas_dashboard.png" width="85%" alt="Task Geometry Atlas Dashboard"> |
 
 ## Conclusion
 

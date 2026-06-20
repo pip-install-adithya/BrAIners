@@ -67,16 +67,14 @@ This is exactly why the later pipeline uses:
 - controlled output formatting,
 - and routing-aware rewards.
 
-## Figures to embed
-
 ## Phi-3 Delimiter Causality Experiment Results
 
 ### GSM8K Evaluation
 
 | DLA & Position Heatmap | Recovery & Attention Heatmap |
 | :---: | :---: |
-| <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_dla_curve.png" height="220" alt="GSM8K DLA Curve"> | <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_patch_recovery_curve.png" height="220" alt="GSM8K Patch Recovery Curve"> |
-| <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_patch_position_heatmap.png" height="220" alt="GSM8K Patch Position Heatmap"> | <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_attention_head_heatmap.png" height="220" alt="GSM8K Attention Head Heatmap"> |
+| <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_dla_curve.png" height="220" alt="GSM8K DLA Curve"> | <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_patch_recovery_curve.png" height="220" alt="GSM8K Patch Recovery Curve"> |
+| <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_patch_position_heatmap.png" height="220" alt="GSM8K Patch Position Heatmap"> | <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/gsm8k_attention_head_heatmap.png" height="220" alt="GSM8K Attention Head Heatmap"> |
 
 ---
 
@@ -84,8 +82,8 @@ This is exactly why the later pipeline uses:
 
 | DLA & Position Heatmap | Recovery & Attention Heatmap |
 | :---: | :---: |
-| <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_dla_curve.png" height="220" alt="StrategyQA DLA Curve"> | <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_patch_recovery_curve.png" height="220" alt="StrategyQA Patch Recovery Curve"> |
-| <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_patch_position_heatmap.png" height="220" alt="StrategyQA Patch Position Heatmap"> | <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_attention_head_heatmap.png" height="220" alt="StrategyQA Attention Head Heatmap"> |
+| <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_dla_curve.png" height="220" alt="StrategyQA DLA Curve"> | <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_patch_recovery_curve.png" height="220" alt="StrategyQA Patch Recovery Curve"> |
+| <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_patch_position_heatmap.png" height="220" alt="StrategyQA Patch Position Heatmap"> | <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/strategyqa_attention_head_heatmap.png" height="220" alt="StrategyQA Attention Head Heatmap"> |
 
 ---
 
@@ -93,8 +91,8 @@ This is exactly why the later pipeline uses:
 
 | DLA & Position Heatmap | Recovery & Attention Heatmap |
 | :---: | :---: |
-| <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_dla_curve.png" height="220" alt="MMLU DLA Curve"> | <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_patch_recovery_curve.png" height="220" alt="MMLU Patch Recovery Curve"> |
-| <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_patch_position_heatmap.png" height="220" alt="MMLU Patch Position Heatmap"> | <img src="../../experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_attention_head_heatmap.png" height="220" alt="MMLU Attention Head Heatmap"> |
+| <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_dla_curve.png" height="220" alt="MMLU DLA Curve"> | <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_patch_recovery_curve.png" height="220" alt="MMLU Patch Recovery Curve"> |
+| <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_patch_position_heatmap.png" height="220" alt="MMLU Patch Position Heatmap"> | <img src="../../src/experiments/phi3_delimiter_causality/phi3_delimiter_causality/plots/mmlu_attention_head_heatmap.png" height="220" alt="MMLU Attention Head Heatmap"> |
 
 ## Conclusion
 

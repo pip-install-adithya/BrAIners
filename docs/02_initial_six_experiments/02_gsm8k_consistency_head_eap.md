@@ -56,24 +56,27 @@ The anchored variant slightly changes the routing path, but the overall behavior
 That means the issue is not just prompt cosmetics.  
 It is how the model decides when to finalize the answer.
 
-## Figures to embed
+## Phi-3 GSM8K Consistency Head EAP Experiment Results
 
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_accuracy_bar.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_attention_curve.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_consistency_head_heatmap.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_patch_recovery_curve.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_patch_recovery_heatmap.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_dla_curve.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_gold_logprob_bar.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_metric_correlations.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_accuracy_bar.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_attention_curve.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_consistency_head_heatmap.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_patch_recovery_curve.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_patch_recovery_heatmap.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_dla_curve.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_gold_logprob_bar.png`
-- `../experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_metric_correlations.png`
+### Plain Evaluation
+
+| Metrics & Curves | Heatmaps & Correlations |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_accuracy_bar.png" height="220" alt="Plain Accuracy Bar"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_consistency_head_heatmap.png" height="220" alt="Plain Consistency Head Heatmap"> |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_attention_curve.png" height="220" alt="Plain Attention Curve"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_patch_recovery_heatmap.png" height="220" alt="Plain Patch Recovery Heatmap"> |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_patch_recovery_curve.png" height="220" alt="Plain Patch Recovery Curve"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_metric_correlations.png" height="220" alt="Plain Metric Correlations"> |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_dla_curve.png" height="220" alt="Plain DLA Curve"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/plain_gold_logprob_bar.png" height="220" alt="Plain Gold Logprob Bar"> |
+
+---
+
+### Anchored Evaluation
+
+| Metrics & Curves | Heatmaps & Correlations |
+| :---: | :---: |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_accuracy_bar.png" height="220" alt="Anchored Accuracy Bar"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_consistency_head_heatmap.png" height="220" alt="Anchored Consistency Head Heatmap"> |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_attention_curve.png" height="220" alt="Anchored Attention Curve"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_patch_recovery_heatmap.png" height="220" alt="Anchored Patch Recovery Heatmap"> |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_patch_recovery_curve.png" height="220" alt="Anchored Patch Recovery Curve"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_metric_correlations.png" height="220" alt="Anchored Metric Correlations"> |
+| <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_dla_curve.png" height="220" alt="Anchored DLA Curve"> | <img src="../../src/experiments/phi3_gsm8k_consistency_head_eap/phi3_consistency_head_eap/plots/anchored_gold_logprob_bar.png" height="220" alt="Anchored Gold Logprob Bar"> |
 
 ## Conclusion
 
