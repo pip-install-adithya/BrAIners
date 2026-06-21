@@ -1,13 +1,13 @@
-# Project BrAIners
+# Project ReasonEdge
 
 - **Problem Statement Number** - 06
 - **Problem Statement Title** - *Enhancing Reasoning in Small Language Models (SLMs) using Reinforcement Learning*
 - **Team name** - *BrAIners*
 - **Team members (Names)** - *Adithya Lakshminarayanan*, *Thanish Vardhan B*
 - **Institute/College Name** - *Indian Institute of Technology Madras*, *Adyar, Chennai*
-- **Final Presentation Google Drive Link** - *Upload the PDF presentation for your final submission on Google Drive (It should be openly accessible and not behind any login wall)*
+- **Final Presentation Google Drive Link** - *[Drive PDF](https://drive.google.com/file/d/1cY8gm2o9fL3WnTpndghEQ0kpsM2F7Bac/view?usp=sharing)*
 - **Full Submission Demo Video Link** - *[YT Demo Video](https://youtu.be/71GWrhE6G2Q)*
-- **Setup & Result Reproducibility Video Link** - *(Upload the Demo video on Youtube as a public or unlisted video and share the link. Google Drive uploads for video is not allowed.)*
+- **Setup & Result Reproducibility Video Link** - *[YT Setup Video](https://youtu.be/61bKzQ845JA)*
 
 ### Project Artefacts
 
