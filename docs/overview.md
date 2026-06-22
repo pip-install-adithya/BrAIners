@@ -5,7 +5,6 @@
 This project investigates how to improve reasoning in small language models using a combination of supervised finetuning, mechanistic interpretability, and reinforcement-learning-style refinement. The final system is built around an open-weight backbone model and is evaluated on GSM8K, StrategyQA, and MMLU.
 
 The project is structured around three main goals:
-
 1. Build a strong and stable supervised baseline.
 2. Diagnose failure modes using interpretability and benchmark analysis.
 3. Explore targeted RL-style refinement methods that focus on the model’s remaining weaknesses.
@@ -15,10 +14,10 @@ The project is structured around three main goals:
 ## 2. Technical Stack
 
 ### Core model stack
-- Backbone model: `microsoft/phi-3-mini-4k-instruct` - [HF Page](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
-- Parameter-efficient finetuning: LoRA / PEFT
-- Quantization support: bitsandbytes 4-bit loading
-- Inference and training: PyTorch + Hugging Face Transformers
+- **Backbone model:** `microsoft/phi-3-mini-4k-instruct` — [HF Page](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
+- **Parameter-efficient finetuning:** LoRA / PEFT
+- **Quantization support:** bitsandbytes 4-bit loading
+- **Inference and training:** PyTorch + Hugging Face Transformers
 
 ### Evaluation and benchmarking
 - GSM8K evaluation
@@ -82,46 +81,46 @@ The solution is organized into a modular pipeline.
 The data layer loads benchmark examples, samples held-out subsets, and prepares task-specific training and evaluation pools.
 
 For each task:
-- GSM8K uses math word problems with final numeric answers.
-- StrategyQA uses binary yes/no questions.
-- MMLU uses multiple-choice questions with A/B/C/D answers.
+- **GSM8K** uses math word problems with final numeric answers.
+- **StrategyQA** uses binary yes/no questions.
+- **MMLU** uses multiple-choice questions with A/B/C/D answers.
 
 ### 4.2 Prompting layer
 Each task uses a task-specific prompt format:
-- GSM8K: step-by-step reasoning plus final numeric answer
-- StrategyQA: short reasoning plus yes/no answer
-- MMLU: short reasoning plus single-letter answer
+- **GSM8K:** step-by-step reasoning plus final numeric answer
+- **StrategyQA:** short reasoning plus yes/no answer
+- **MMLU:** short reasoning plus single-letter answer
 
 The prompting layer is important because the model is highly sensitive to output format and answer routing.
 
 ### 4.3 Model layer
 The model layer consists of:
-- a Phi-3-mini backbone,
-- an SFT LoRA adapter,
-- optional RL-style challenger checkpoints,
-- and evaluation-time decoding logic.
+- A Phi-3-mini backbone
+- An SFT LoRA adapter
+- Optional RL-style challenger checkpoints
+- Evaluation-time decoding logic
 
 ### 4.4 Evaluation layer
 The evaluation layer:
-- generates answers,
-- extracts final responses,
-- checks correctness,
-- saves prediction CSVs,
-- and compares checkpoints.
+- Generates answers
+- Extracts final responses
+- Checks correctness
+- Saves prediction CSVs
+- Compares checkpoints
 
 ### 4.5 Interpretability layer
 The interpretability layer saves:
-- residual norm plots,
-- cosine-to-final-layer curves,
-- token-probability heatmaps,
-- and TLens-style dashboards.
+- Residual norm plots
+- Cosine-to-final-layer curves
+- Token-probability heatmaps
+- TLens-style dashboards
 
 ### 4.6 Reporting layer
 The reporting layer exports:
-- CSV results,
-- JSON summaries,
-- figures,
-- and markdown documentation.
+- CSV results
+- JSON summaries
+- Figures
+- Markdown documentation
 
 ---
 
@@ -132,25 +131,21 @@ The SFT stage trains the model using supervised next-token prediction on benchma
 
 The objective is:
 
-$$
-L_{\text{SFT}}(\theta) = -\sum_{t=1}^{T} \log \pi_\theta(y_t \mid x, y_{<t})
-$$
+$$L_{\text{SFT}}(\theta) = -\sum_{t=1}^{T} \log \pi_\theta(y_t \mid x, y_{<t})$$
 
 where:
-- $x$ is the input prompt,
-- $y$ is the target completion,
-- $\pi_\theta$ is the model distribution.
+- $x$ is the input prompt
+- $y$ is the target completion
+- $\pi_\theta$ is the model distribution
 
 ### 5.2 LoRA adaptation
 Instead of updating the full backbone, the training uses LoRA:
 
-$$
-W = W_0 + BA
-$$
+$$W = W_0 + BA$$
 
 where:
-- $W_0$ is the frozen base weight,
-- $A$ and $B$ are trainable low-rank matrices.
+- $W_0$ is the frozen base weight
+- $A$ and $B$ are trainable low-rank matrices
 
 This keeps training efficient and stable.
 
@@ -159,42 +154,28 @@ The later refinement stages use reward shaping, preference optimization, and har
 
 A generic RL objective can be written as:
 
-$$
-J(\theta) = \mathbb{E}_{y \sim \pi_\theta(\cdot \mid x)} [R(x,y)]
-$$
+$$J(\theta) = \mathbb{E}_{y \sim \pi_\theta(\cdot \mid x)} [R(x,y)]$$
 
 where $R(x,y)$ measures correctness, format quality, and answer routing.
 
 ### 5.4 Hard-example mining
 Examples that repeatedly fail are given higher weight:
 
-$$
-w_i = 1 + \lambda h_i
-$$
+$$w_i = 1 + \lambda h_i$$
 
 where $h_i$ is a hardness score.
 
 ### 5.5 Preference optimization
 A DPO-style objective compares a better completion $y^+$ and worse completion $y^-$:
 
-$$
-L_{\text{DPO}}(\theta)
-=
--\log \sigma \left(
-\beta \left[
-\log \pi_\theta(y^+ \mid x) - \log \pi_\theta(y^- \mid x)
--
-\log \pi_{\text{ref}}(y^+ \mid x) + \log \pi_{\text{ref}}(y^- \mid x)
-\right]
-\right)
-$$
+$$L_{\text{DPO}}(\theta) = -\log \sigma \left( \beta \left[ \log \pi_\theta(y^+ \mid x) - \log \pi_\theta(y^- \mid x) - \log \pi_{\text{ref}}(y^+ \mid x) + \log \pi_{\text{ref}}(y^- \mid x) \right] \right)$$
 
 ### 5.6 Residual-stream analysis
 The interpretability pipeline tracks:
-- residual norms,
-- cosine similarity to the final layer,
-- target-token probabilities over layers,
-- and final-token confidence behavior.
+- Residual norms
+- Cosine similarity to the final layer
+- Target-token probabilities over layers
+- Final-token confidence behavior
 
 This is used to understand how the model moves from internal reasoning to final answer emission.
 
@@ -202,4 +183,4 @@ This is used to understand how the model moves from internal reasoning to final 
 
 ## 6. Installation Instructions
 
-Follow the instruction given in the [YT video](https://youtu.be/61bKzQ845JA).
+Follow the instructions given in the [YT video](https://youtu.be/61bKzQ845JA).
