@@ -9,32 +9,158 @@
 - **Full Submission Demo Video Link** - *[YT Demo Video](https://youtu.be/71GWrhE6G2Q)*
 - **Setup & Result Reproducibility Video Link** - *[YT Setup Video](https://youtu.be/61bKzQ845JA)*
 
-### Project Artefacts
+## Overview
 
-- **Technical Documentation** - Create a **docs** folder and add all technical details in markdown files inside this folder explaining the project Technical Stack, List of OSS libraries/projects used along with their links, the technical architecture of your solution, implementation details, installation instructions, user guide, salient features of the projects. Kindly add screenshots wherever possible.
-- **[Important]** Create a file `docs/ax.md` whiere you explain in detail how you utilizes open weight models and/or agentic development tools to implement your solution. Explain in detail your  Agentic AI setup , Agentic workflows, Reasoning & planning pipelines, Tool use / tool chaining, Coding assistants, agents, harness, MCP servers, agents.md, skills, Memory / context handling, Multi-agent orchestration systems, etc. Please highlight from your experience - what worked and **what did not work**.
-- **Source Code** - Create a **src** folder and add all developed project source codes (including training & benchmark evaluation codes) in the repo. The code must be capable of being successfully installed/executed and must run consistently on the intended platforms.
-- **Models Used** - *(Hugging Face links to all models used in the project. You are permitted to use only open weight models.)*
-- **Models Published** - *(In case you have developed a model as a part of your solution, kindly upload it on Hugging Face under appropriate open source license and add the link here.)*
-- **Datasets Used** - *(Links to all datasets used in the project. You are permitted to use publicly available datasets under licenses like Creative Commons, Open Data Commons, or equivalent.)*
-- **Datasets Published** - *(Links to all datasets created for the project and published on Hugging Face. You are allowed to publish any synthetic or proprietary dataset used in their project, but will be responsible for any legal compliance and permission for the same. The dataset can be published under Creative Commons, Open Data Commons, or equivalent license.)*
+ReasonEdge is an open-weight reasoning project built on top of **Phi-3-mini**.  
+The repository contains:
 
-#### Final Presentation
+- a strong **SFT champion** checkpoint,
+- multiple **RL attempts** including GRPO, hierarchical steering GRPO, and RRPO/DPO-style hard-mining,
+- extensive **mechanistic interpretability** work using TLens-style residual stream analysis,
+- and full **benchmark evaluation** for GSM8K, StrategyQA, and MMLU.
 
-Unlike Phase 1 presentation, in Phase 2 you can freely decide the template, flow and content of your technical presentation. Ensure you cover all aspects of your solution - innovation, novelty, architecture, open datasets/models developed and used, final deliverable details, KPIs of your solution, AI/Agent use, any other details. 
+The project was developed to study and improve the reasoning behavior of small language models through a combination of:
+- supervised finetuning,
+- calibrated evaluation,
+- mechanistic analysis,
+- and RL-based refinement.
 
-#### Full Submission Demo Video
+---
 
-Create a high quality video demonstration your solution in real life and showcasing how it is actually solves the proposed AX Hackathon problem.
+## Project Artefacts
 
-#### Setup & Result Reproducibility Video
+### Technical Documentation
+The `docs/` folder contains detailed markdown documentation covering:
+- project story and motivation,
+- technical architecture,
+- implementation details,
+- installation instructions,
+- user guide,
+- salient features,
+- SFT champion analysis,
+- RL attempts,
+- TLens / mechanistic interpretability reports,
+- and a full `docs/ax.md` file describing the agentic development workflow and what worked / did not work.
 
-To ensure reproducibility of results and to verify the presented KPIs, we require you to create a video demonstrating:
-- Step by step project installation,
-- Data/model download steps, 
-- Execution of all required codes to train the developed models (if any)
-- Execution of all evaluation codes to reproduce the presented results/KPIs 
+### Source Code
+The `src/` folder contains all major code and experiment artifacts, including:
+- benchmark evaluation notebooks and scripts,
+- SFT training code,
+- GRPO / hierarchical steering / RRPO-DPO training code,
+- TLens and residual-stream analysis notebooks,
+- experiment outputs,
+- CSV summaries,
+- plots,
+- and saved adapters / checkpoints.
 
-### Attribution 
+### Models Used
+- `microsoft/phi-3-mini-4k-instruct` — Hugging Face: https://huggingface.co/microsoft/phi-3-mini-4k-instruct
 
-In case this project is built on top of an existing open source project, please provide the original project link here. Also, mention what new features were developed. Failing to attribute the source projects may lead to disqualification during the time of evaluation.
+### Models Published
+- *Nothing has been published to Hugging Face.*
+
+### Datasets Used
+- GSM8K — https://huggingface.co/datasets/openai/gsm8k
+- StrategyQA — https://huggingface.co/datasets/ChilleD/StrategyQA
+- MMLU — https://huggingface.co/datasets/cais/mmlu
+
+### Datasets Published
+- *Nothing has been published to Hugging Face.*
+
+---
+
+## Repository Structure
+
+### `docs/`
+Documentation for the entire project.
+
+Important folders include:
+- `docs/01_project_story/` — project story, problem framing, and overall motivation
+- `docs/02_initial_six_experiments/` — the first six diagnostic experiments
+- `docs/03_advanced_five_experiments/` — the five deeper mechanistic experiments
+- `docs/04_tlens/` — residual-stream / TLens reports
+- `docs/05_sft_champion/` — complete SFT documentation
+- `docs/06_rl_attempts/` — GRPO, hierarchical steering, and RRPO/DPO attempts
+- `docs/ax.md` — agentic AI and development workflow write-up
+- `docs/overview.md` — high-level documentation overview
+
+### `src/`
+All experiment and training code, including:
+- baseline benchmarking,
+- SFT training,
+- RL training attempts,
+- TLens experiments,
+- and saved outputs / figures / checkpoints.
+
+Key subfolders include:
+- `src/experiments/`
+- `src/advanced_experiments/`
+- `src/t_lens/`
+- `src/phi3_adapters/`
+- `src/final_best_code/`
+- `src/file_dump/`
+
+---
+
+## Technical Documentation Summary
+
+The documentation explains:
+- how the Phi-3-mini backbone was used,
+- how SFT was trained,
+- how benchmark evaluation was done,
+- why the benchmark pipeline had to be fixed carefully,
+- why the TLens work mattered,
+- why the SFT checkpoint became the champion,
+- and how the RL attempts evolved from generic GRPO to hierarchical steering and finally RRPO/DPO-style hard mining.
+
+---
+
+## Final Presentation
+
+The final presentation covers:
+- the project motivation,
+- the model and dataset setup,
+- the benchmark results,
+- the mechanistic interpretability findings,
+- the RL exploration path,
+- the final SFT champion.
+
+---
+
+## Demo Video
+
+The demo video shows the end-to-end solution in action, including:
+- interactive inference,
+- reasoning-style outputs,
+- and the final answer generation pipeline.
+
+---
+
+## Setup & Reproducibility Video
+
+The reproducibility video shows:
+- environment setup,
+- dataset/model download steps,
+- training execution,
+- evaluation execution,
+- and reproduction of the experiments.
+
+---
+
+## Attribution
+
+This project is built on top of public open-weight models, public benchmark datasets, and open-source tooling.
+
+Original project and tooling references are listed in the documentation section where appropriate, along with the new features developed for ReasonEdge.
+
+---
+
+## Project Summary
+
+ReasonEdge is designed to show that the biggest improvements in small language models come from:
+- better supervised finetuning,
+- better evaluation,
+- better mechanistic understanding,
+- and more targeted refinement than generic RL alone.
+
+The strongest stable checkpoint is the plain SFT model, while the RL attempts serve as a structured exploration of what still remains to be improved.
